@@ -1,0 +1,96 @@
+.navbar {
+  position: relative;
+}
+
+.navbar-custom {
+  background-color: #476187;
+  height: 55px;
+}
+
+.navbar-toggler-icon {
+  color: #000;
+}
+
+.navbar-nav {
+  margin-left: auto;
+ 
+}
+.nav-item, .nav-link{
+margin-left: 69px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 15px;
+line-height: 18px;
+}
+
+/* Icone de Lupa*/
+.search-icon {
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  
+}
+
+.search-input {
+  display: none;
+  height: 100%;
+  width: 150px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.search-input.show {
+  display:  block;
+  
+  
+  
+}
+
+
+
+.forma-geometrica {
+  width: 2000px;
+  height: 244px;
+  background-color: #08c5e2;
+ 
+  
+}
+
+#meio-circulo{
+  text-align: center;
+}
+/*
+.base-meio-circulo {
+  width: 150px; 
+  height: 62px;
+  background-color: #476187;
+  border-radius: 50% 50% 0 0;
+  align-items: center;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}*/
+
+
+
+
+
+@media (max-width: 768px) {
+  .navbar-toggler {
+      display: block;
+  }
+
+  .navbar-nav {
+      display: none;
+  }
+  
+  .navbar-collapse {
+      justify-content: flex-end;
+  }
+  
+  .navbar-collapse .navbar-nav {
+      display: block;
+  }
+}
