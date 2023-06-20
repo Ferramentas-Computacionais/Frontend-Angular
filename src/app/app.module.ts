@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule} from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -18,10 +19,7 @@ import { HomeComponent } from './components/home/home.component';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-
-    // Adicione os módulos do PrimeNG ao array de imports
-    MenubarModule,
-    InputTextModule
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
