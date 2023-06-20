@@ -15,6 +15,7 @@ export class HomeComponent {
     this.instituicaoservice.obter().subscribe(
       (response) => {
         // Sucesso na obtenção das instituições
+        console.log(response)
         this.instituicoes = response;
         // Faça o processamento adicional dos dados recebidos
       },
