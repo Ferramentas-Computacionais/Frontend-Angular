@@ -6,8 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Importe os módulos do PrimeNG que você deseja usar
-import { MenubarModule } from 'primeng/menubar';
-import { InputTextModule } from 'primeng/inputtext';
+
 import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
