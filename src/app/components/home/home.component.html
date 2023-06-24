@@ -36,12 +36,30 @@
 <h1 style="text-align: center; line-height: 150px;bottom: 50px;">Instituições</h1>
   <div class="container marketing">
         <!-- Três colunas de texto, abaixo do carousel -->
-        <div class="row" >
-          <div class="col-lg-4" *ngFor="let instituicao of instituicoes">
-            <img class="rounded" src="{{ instituicao.imagem }}" alt="Generic placeholder image" width="140" height="140">
-            <h2>{{ instituicao.nome }}</h2>
-            <p>{{ instituicao.descricao }}</p>
-            <p><a class="btn btn-secondary" href="#" role="button">Quero Ajudar &raquo;</a></p>
+        <div class="row">
+          <div class="row">
+            <div class="col-lg-3" *ngFor="let instituicao of instituicoes">
+              <div class="card mb-4 border-0 card-custom">
+                <img class="card-img-top rounded" src="{{ instituicao.imagem }}" alt="Generic placeholder image">
+                <div class="card-body d-flex flex-column justify-content-between position-relative text-center">
+                  <div>
+                    <h2 class="card-title card-title-custom">{{ instituicao.nome }}</h2>
+                    <p class="card-text text-truncate">{{ instituicao.descricao }}</p>
+                    <p><strong>Campanha:</strong> Nome da campanha aqui</p>
+                  </div>
+                  <div class="d-flex justify-content-center">
+                    <a class="btn custom-button w-100" href="#" role="button">Quero Ajudar!</a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-
+          
+          
+        
         </div>
+        
+        
+    </div>
+        
+        
