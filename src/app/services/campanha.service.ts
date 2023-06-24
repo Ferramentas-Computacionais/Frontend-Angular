@@ -15,7 +15,7 @@ export class CampanhaService {
   }
 
   obter_por_id(userId: number) {
-    const campanhasUrl = `http://127.0.0.1:5000/campanhas/${userId}`;
-    return this.httpclient.get<campanha_interface[]>(campanhasUrl);
+    return this.httpclient.get<campanha_interface[]>(`http://127.0.0.1:5000/campanhas/${userId}`);
   }
+  
 }
