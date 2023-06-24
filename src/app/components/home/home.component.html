@@ -45,7 +45,7 @@
                   <div>
                     <h2 class="card-title card-title-custom">{{ instituicao.nome }}</h2>
                     <p class="card-text text-truncate">{{ instituicao.descricao }}</p>
-                    <p><strong>Campanha:</strong> Nome da campanha aqui</p>
+                    <p><strong>Campanha:</strong> {{ obternomecampanhaPorId(instituicao.usuario_id) }}</p>
                   </div>
                   <div class="d-flex justify-content-center">
                     <a class="btn custom-button w-100" href="#" role="button">Quero Ajudar!</a>

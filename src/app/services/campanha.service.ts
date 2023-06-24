@@ -11,5 +11,11 @@ export class CampanhaService {
 
   obter(){
     return this.httpclient.get<campanha_interface[]>("http://127.0.0.1:5000/mostrar-campanha/3")
+    
+  }
+
+  obter_por_id(userId: number) {
+    const campanhasUrl = `http://127.0.0.1:5000/campanhas/${userId}`;
+    return this.httpclient.get<campanha_interface[]>(campanhasUrl);
   }
 }

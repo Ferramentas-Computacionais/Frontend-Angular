@@ -17,15 +17,10 @@ export class HomeComponent {
   obterinstituicoes(){
     this.instituicaoservice.obter().subscribe(
       (response) => {
-        // Sucesso na obtenção das instituições
-        //console.log(response)
         this.instituicoes = response;
-        // Faça o processamento adicional dos dados recebidos
       },
       (error) => {
-        // Tratamento de erro ao obter as instituições
         console.error(error);
-        // Exiba uma mensagem de erro ou execute ação apropriada
       }
     );
   }
@@ -33,16 +28,16 @@ export class HomeComponent {
   obtercampanhas(){
     this.campanhaservice.obter().subscribe(
       (response) => {
-        // Sucesso na obtenção das instituições
         console.log(response)
         this.campanhas = response;
-        // Faça o processamento adicional dos dados recebidos
       },
       (error) => {
-        // Tratamento de erro ao obter as instituições
         console.error(error);
-        // Exiba uma mensagem de erro ou execute ação apropriada
       }
     );
   }
+  obternomecampanhaPorId(userId: number){
+    
+  }
+
 }
