@@ -9,13 +9,23 @@
     object-fit: cover;
     width: 100%;
     height: 180px;
+    font-family: Open Sans;
+
   }
   
   .card-text {
     max-height: 100px;
     overflow: hidden;
   }
-  
+  .texto-lateral {
+    float: left;
+    margin-left: 2vw; 
+    margin-bottom: 2vw;
+    color: #4E4E4E;
+    font-size: 2.3rem;
+    font-family: Open Sans;
+    font-weight: 700;
+  }
 
   .custom-button {
     background-color: #5A6F80;
@@ -29,3 +39,50 @@
     font-weight: bold;
 
   }  
+
+  .doe-retangulo {
+    background-color: #E0FBFF;
+    height: 200px; 
+    width: 100%;  
+    position: relative;
+    margin-right: 20px;
+    padding: 20px;
+    
+
+  }
+  .Instituicoes{
+    text-align: center; 
+    line-height: 150px;
+    bottom: 50px;
+    color: #4E4E4E;
+    text-align: center;
+    font-size: 48px;
+    font-family: Open Sans;
+    font-weight: 700;
+  }
+  .botaodoe{
+    margin-right: 2rem;
+    border-radius: 25px;
+    background: #597080;
+    font-family: Open Sans;
+    font-weight: 700;
+
+  }
+
+  .semicirculo {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+    width: 250px;
+    height: 125px;
+    background-color: #597080;
+
+    background-color: transparent;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border: 25px solid #597080;
+    
+  }

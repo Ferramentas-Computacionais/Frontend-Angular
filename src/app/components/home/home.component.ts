@@ -49,7 +49,6 @@ preencherNomeCampanha() {
 obtercampanhas(): void {
   this.campanhaservice.obter().subscribe(
     (response) => {
-      console.log(response)
       this.campanhas = response;
     },
     (error) => {

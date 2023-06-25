@@ -5,7 +5,7 @@
   <div class="carousel-inner">
     <div *ngFor="let campanha of campanhas; let i = index" class="carousel-item" [class.active]="i === 0">
       <div class="d-flex justify-content-center">
-        <img class="w-50 img-fluid" [src]="campanha.imagem" [alt]="'Slide ' + (i + 1)">
+        <img class="w-25 img-fluid" [src]="campanha.imagem" [alt]="'Slide ' + (i + 1)">
       </div>
       <div class="carousel-caption d-none d-md-block">
         <h5>{{ campanha.nome }}</h5>
@@ -29,11 +29,18 @@
 
 
 <!-- Retangulo no Meio do Site-->
-<div class="forma-geometrica">
-    <img id="meio-circulo" src="imagens/index_img/meio c 1.png">
-  </div>
+<div class="doe-retangulo d-flex align-items-center justify-content-between">
+  <p class="texto-lateral">
+  Faça a Diferença e Salve Vidas
+  </p>
+  <button class="btn btn-primary float-end btn-lg botaodoe">Faça uma Doação
+  </button>
+  <div class="semicirculo d-none d-md-block"></div>
 
-<h1 style="text-align: center; line-height: 150px;bottom: 50px;">Instituições</h1>
+
+</div>
+
+<h1 class="Instituicoes">Instituições</h1>
   <div class="container marketing">
         <!-- Três colunas de texto, abaixo do carousel -->
         <div class="row">
