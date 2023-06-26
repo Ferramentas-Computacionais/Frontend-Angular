@@ -1,4 +1,5 @@
 export interface instituicao_interface{
+    id: number,
     nome: string,
     email: string,
     telefone: string,

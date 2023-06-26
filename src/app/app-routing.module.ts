@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 
 const routes: Routes = [
   {path:'',component: HomeComponent},
-  {path:'instituicao',component: InstituicaoComponent}
+  {path:'instituicao/:id',component: InstituicaoComponent}
 
 ];
 

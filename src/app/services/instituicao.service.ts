@@ -10,6 +10,10 @@ export class InstituicaoService {
   constructor(private httpclient: HttpClient) { }
 
   obter(){
-    return this.httpclient.get<instituicao_interface[]>("http://127.0.0.1:5000/mostrar-instituicao/2")
+    return this.httpclient.get<instituicao_interface[]>("http://127.0.0.1:5000/mostrar-instituicao/2");
   }
+  obter_pelo_id(userId: number){
+    return this.httpclient.get<instituicao_interface[]>(`http://127.0.0.1:5000/mostrar-instituicao/id/${userId}`)
+  }
+
 }
