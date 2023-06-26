@@ -8,11 +8,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // Importe os módulos do PrimeNG que você deseja usar
 
 import { HomeComponent } from './components/home/home.component';
+import { InstituicaoComponent } from './components/instituicao/instituicao.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    InstituicaoComponent
   ],
   imports: [
     BrowserModule,
