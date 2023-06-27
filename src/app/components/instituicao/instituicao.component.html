@@ -1,18 +1,20 @@
 
   <body>
+    <script src="https://maps.googleapis.com/maps/api/js?key=SUA_CHAVE_DE_API"></script>
     <script>href="tes"</script>
     <div id="retangulo" ></div>
 
-    <div class="conteiner-fluid" id="apresenta-instituição">
+    <div class="conteiner-fluid" id="apresenta-instituição" *ngFor="let instituicao of instituicoes">
       <div class="row d-flex  ">
         <div class="col-md-5">
-          <img  src="aacd 2.png" alt="imagem da instituicao" id="apresenta-instituição-logo">
+          <img  src="{{ instituicao.imagem }}" alt="imagem da instituicao" id="apresenta-instituição-logo">
           
           <h2 class="col" id="dados-instituição">Campanha De Arrecadação <br> Local: xxxxxxxxxx <br> 
-            Telefone: 4002-8922<br> Email:  cleitin_67
+            Telefone:{{ instituicao.telefone }}<br> Email:{{ instituicao.email }}
             </h2>
             <button class="btn" id="btn-nossos-projetos"> <p > Projetos</p></button>
             <ul id="lista-projetos">
+             <!-- Aqui falta criar no banco -->   
               <li>Nome de projeto</li>
               <li>Nome de projeto</li>
               <li>Nome de projeto</li>
@@ -24,10 +26,7 @@
           <div class="col-md-7">
             <div class="col d-flex  ">
               <h2 id="texto-lado-logo">
-            Pri alterum vivendo denique ad, in vis consul dissentias. 
-            Pri at oratio delenit alienum, ius ea ancillae theophrastus.
-            Pri alterum vivendo denique ad, in vis consul dissentias. 
-            Pri at oratio delenit alienum, ius ea ancillae theophrastus. 
+                {{ instituicao.descricao}}"
               </h2>
             </div>
             <iframe id="mapa" src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d15807.238733366752!2d-34.9175803!3d-7.9149394!3m2!1i1024!2i768!4f13.1!5e0!3m2!1spt-BR!2sbr!4v1687662204635!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
@@ -38,7 +37,7 @@
         <div class="col"></div>
 
         <div class="col">
-          <div class="d-flex" id="nome-instituição">Nome legal</div>        
+          <div class="d-flex" id="nome-instituição">{{ instituicao.nome }}</div>        
         </div>
         <div class="col"></div>
 
@@ -59,7 +58,7 @@
       </div>
     
     </div>
-    <div id="nome-instituição">Nome legal</div>
+    
 
    
   </body>
