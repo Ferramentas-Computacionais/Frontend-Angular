@@ -1,79 +1,66 @@
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=SUA_CHAVE_DE_API"></script>
-    <script>href="tes"</script>
-    <div id="retangulo"></div>
+<script>href="tes"</script>
+<div id="retangulo"></div>
 
-    <div class="container-fluid" id="apresenta-instituição" *ngIf="instituicoes">
-      <div class="row d-flex">
-        <div class="col-md-5">
-          <img src="{{ instituicoes.imagem }}" alt="imagem da instituição" id="apresenta-instituição-logo">
-          
-          <h2 class="col" id="dados-instituição">
-            Campanha De Arrecadação <br>
-            Local: xxxxxxxxxx <br>
-            Telefone: {{ instituicoes.telefone }}<br>
-            Email: {{ instituicoes.email }}
-          </h2>
-          
-          <button class="btn" id="btn-nossos-projetos">
-            <p>Projetos</p>
-          </button>
-          
-          <ul id="lista-projetos">
-            <!-- Aqui falta criar no banco, precisa disso msm? -->
-            <li>Nome de projeto</li>
-            <li>Nome de projeto</li>
-            <li>Nome de projeto</li>
-            <li>Nome de projeto</li>
-          </ul>
-        </div>
-        
-        <div class="col-md-7">
-          <div class="col d-flex">
-            <h2 id="texto-lado-logo">
-              {{ instituicoes.descricao }}
-            </h2>
-          </div>
-          
-          <iframe id="mapa"
-            [src]="instituicoes.mapa"
-            width="600"
-            height="450"
-            style="border:0;"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
+<div class="container-fluid" id="apresenta-instituição" *ngIf="instituicoes">
+  <div class="row d-flex">
+    <div class="col-md-5">
+      <img src="{{ instituicoes.imagem }}" alt="imagem da instituição" id="apresenta-instituição-logo">
+      
+      <h2 class="col" id="dados-instituição">
+        Campanha De Arrecadação <br>
+        Local: xxxxxxxxxx <br>
+        Telefone: {{ instituicoes.telefone }}<br>
+        Email: {{ instituicoes.email }}
+      </h2>
+      
+      <button class="btn" id="btn-nossos-projetos">
+        <p>Projetos</p>
+      </button>
+      
+      <ul id="lista-projetos">
+        <!-- Aqui falta criar no banco, precisa disso msm? -->
+        <li>Nome de projeto</li>
+        <li>Nome de projeto</li>
+        <li>Nome de projeto</li>
+        <li>Nome de projeto</li>
+      </ul>
+    </div>
+    
+    <div class="col-md-7">
+      <div class="col d-flex">
+        <h2 id="texto-lado-logo">
+          {{ instituicoes.descricao }}
+        </h2>
       </div>
       
-      <div class="row justify-content-center">
-        <div class="col"></div>
-        <div class="col"></div>
-        
-        <div class="col">
-          <div class="d-flex" id="nome-instituição">{{ instituicoes.nome }}</div>
-        </div>
-        
-        <div class="col"></div>
-        <div class="col"></div>
-      </div>
-      
-      <div class="row justify-content-center">
-        <div class="col"></div>
-        <div class="col"></div>
-        
-        <div class="col">
-          <div class="d-flex">
-            <img src="/05 1.png">
-          </div>
-        </div>
-        
-        <div class="col"></div>
-        <div class="col"></div>
+      <div id="mapa"></div>
+    </div>
+  </div>
+  
+  <div class="row justify-content-center">
+    <div class="col"></div>
+    <div class="col"></div>
+    
+    <div class="col">
+      <div class="d-flex" id="nome-instituição">{{ instituicoes.nome }}</div>
+    </div>
+    
+    <div class="col"></div>
+    <div class="col"></div>
+  </div> 
+  
+  <div class="row justify-content-center">
+    <div class="col"></div>
+    <div class="col"></div>
+    
+    <div class="col">
+      <div class="d-flex">
+        <img src="/05 1.png">
       </div>
     </div>
     
-    
-
-   
+    <div class="col"></div>
+    <div class="col"></div>
+  </div>
+</div>

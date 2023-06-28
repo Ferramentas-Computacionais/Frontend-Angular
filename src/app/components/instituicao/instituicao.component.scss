@@ -1,91 +1,104 @@
 #retangulo {
-
-    width: 1365px; 
+    width: 100%;
     height: 39px;
     background-color: #C61E2B;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     margin-bottom: 5px;
     margin-top: 5px;
-}
-#apresenta-instituição {
+  }
+  
+  #apresenta-instituição {
     margin-top: 49px;
     display: flex;
     flex-direction: column;
-    height: 1615px;
-    width: 1365px; 
-    
+    height: auto;
+    width: 100%;
   }
-
-#nome-instituição{
+  
+  #nome-instituição {
     margin-bottom: 17px;
-text-align: center;
-width: 542px;
-height: 58px;
-margin-top: 41px;
-background-color: red;
-color: white;
-border: none;
-border-radius: 50px;
-padding: 10px 20px;
-font-size: 32px;
-font-family: 'MS UI Gothic';
-display: flex;
-justify-content: center;
-align-items: center;
-}
-
-#btn-nossos-projetos{
+    text-align: center;
+    width: 80%;
+    height: 58px;
+    margin-top: 41px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 32px;
+    font-family: 'MS UI Gothic';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #btn-nossos-projetos {
     font-size: 32px;
     justify-content: center;
     align-items: center;
     display: flex;
-    width: 345px;
+    width: 80%;
     height: 60px;
     flex-direction: column;
     flex-shrink: 0;
-margin-top: 41px;
-background-color: red;
-color: white;
-border: none;
-
-border-radius: 50px;
-padding: 10px 20px;
-
-}
-#lista-projetos{
-color: #000;
-font-size: 16px;
-font-family: 'MS UI Gothic';
-}
-#texto-lado-logo{
-justify-content: flex-start;
-width: 964px;
-color: #121212;
-font-size: 36px;
-font-family: 'Open Sans';
-}
-
-#mapa{
-    align-self: flex-end;
-    margin-right: 192px;
+    margin-top: 41px;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #lista-projetos {
+    color: #000;
+    font-size: 16px;
+    font-family: 'MS UI Gothic';
+  }
+  
+  #texto-lado-logo {
+    justify-content: flex-start;
+    width: 80%;
+    color: #121212;
+    font-size: 36px;
+    font-family: 'Open Sans';
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #mapa {
+    align-self: center;
     margin-top: 36px;
-    width: 493px;
+    width: 80%;
     height: 298px;
-}
-#dados-instituição{
-justify-content: flex-start;
-font-family:'Open Sans';
-color: #000;
-text-align: left;
-font-size: 36px;
-font-weight: 600;
-width: 473px;
-}
-#apresenta-instituição-logo{
-width: 218px;
-height: 233px;
-}
-#texto-lado-logo{
-    margin-left: 79px;
-}
+  }
+  
+  #dados-instituição {
+    justify-content: flex-start;
+    font-family: 'Open Sans';
+    color: #000;
+    text-align: left;
+    font-size: 36px;
+    font-weight: 600;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #apresenta-instituição-logo {
+    width: 218px;
+    height: 233px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #texto-lado-logo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
