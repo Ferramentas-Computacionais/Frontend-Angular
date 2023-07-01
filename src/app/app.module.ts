@@ -3,8 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule} from '@angular/common/http'
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxMapLibreGLModule } from '@maplibre/ngx-maplibre-gl';
 // Importe os módulos do PrimeNG que você deseja usar
 
 import { HomeComponent } from './components/home/home.component';
@@ -14,13 +15,16 @@ import { InstituicaoComponent } from './components/instituicao/instituicao.compo
   declarations: [
     AppComponent,
     HomeComponent,
-    InstituicaoComponent
+    InstituicaoComponent,
+    
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxMapLibreGLModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

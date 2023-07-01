@@ -39,6 +39,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "leaflet"],
             "outputPath": "dist/aju-doe",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -52,10 +54,14 @@
               "src/assets"
             ],
             "styles": [
-              
+              "./node_modules/leaflet/dist/leaflet.css",
+
               "src/styles.scss"
+
             ],
-            "scripts": []
+            "scripts": [
+
+            ]
           },
           "configurations": {
             "production": {
@@ -116,6 +122,7 @@
               "src/assets"
             ],
             "styles": [
+
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss"
             ],

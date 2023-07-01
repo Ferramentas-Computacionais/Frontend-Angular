@@ -1,14 +1,14 @@
 
-<script>href="tes"</script>
+<!--<body onload="mapa">-->
 <div id="retangulo"></div>
 
-<div class="container-fluid" id="apresenta-instituição" *ngIf="instituicoes">
+<div class="container-fluid" id="apresenta-instituição" *ngIf="instituicoes" >
   <div class="row d-flex">
     <div class="col-md-5">
       <img src="{{ instituicoes.imagem }}" alt="imagem da instituição" id="apresenta-instituição-logo">
       
       <h2 class="col" id="dados-instituição">
-        Campanha De Arrecadação <br>
+        Campanha De Arrecadação <br> 
         Local: xxxxxxxxxx <br>
         Telefone: {{ instituicoes.telefone }}<br>
         Email: {{ instituicoes.email }}
@@ -33,8 +33,12 @@
           {{ instituicoes.descricao }}
         </h2>
       </div>
-      
-      <div id="mapa"></div>
+      <div id="mapa"> 
+        
+        <div id="mapid"></div>
+          
+       
+    </div>
     </div>
   </div>
   
@@ -63,4 +67,60 @@
     <div class="col"></div>
     <div class="col"></div>
   </div>
+ 
+
+
+    <!--
+    <script>
+    function mapa() {
+      const mapContainer = document.getElementById('mapa');
+
+      let valores = document.getElementById("coordenadas").value;
+      let coordenadasseparadas = valores.split(",");
+      let latitude = Number(coordenadasseparadas[0]);
+      let longitude = Number(coordenadasseparadas[1]);
+      console.log(latitude);
+      console.log(longitude);
+    }
+    
+    var map;
+
+
+function success(pos){
+    console.log(pos.coords.latitude, pos.coords.longitude);
+    h2.textContent = `Latitude:${pos.coords.latitude}, Longitude:${pos.coords.longitude}`;
+    if (map === undefined) {
+        map = L.map('mapid').setView([pos.coords.latitude, pos.coords.longitude], 13);
+    } else {
+        map.remove();
+        map = L.map('mapid').setView([pos.coords.latitude, pos.coords.longitude], 13);
+    }
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(map);
+
+    L.marker([pos.coords.latitude, pos.coords.longitude]).addTo(map)
+        .bindPopup('Você esta aqui!')
+        .openPopup();
+
+    L.marker([latitude, longitude]).addTo(map)
+        .bindPopup(instituicoes.nome)
+        .openPopup();
+}
+function error(err){
+    console.log(err);
+}
+var watchID = navigator.geolocation.watchPosition(success, error, {
+    enableHighAccuracy: true,
+    timeout: 5000
+});
+    
+    </script>
+    
+
+-->
+
+
 </div>
+<!--</body>-->
