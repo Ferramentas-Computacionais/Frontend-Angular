@@ -10,13 +10,22 @@ import { NgxMapLibreGLModule } from '@maplibre/ngx-maplibre-gl';
 
 import { HomeComponent } from './components/home/home.component';
 import { InstituicaoComponent } from './components/instituicao/instituicao.component';
+import { AnunciosComponent } from './components/anuncios/anuncios.component';
+import { LoginComponent } from './components/login/login.component';
+import { CadastroComponent } from './components/cadastro/cadastro.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     InstituicaoComponent,
+
     
+
+    AnunciosComponent,
+    LoginComponent,
+    CadastroComponent
+
   ],
   imports: [
     BrowserModule,
