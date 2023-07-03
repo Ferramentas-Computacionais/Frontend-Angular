@@ -1,4 +1,7 @@
-// nada com nada so pra fazer o pull request
+
+@import "leaflet/dist/leaflet.css";
+
+
 #retangulo {
     width: 100%;
     height: 39px;
@@ -68,14 +71,33 @@
     margin-left: auto;
     margin-right: auto;
   }
-  
+  #mapid { 
+    align-self: center;
+    margin-top: 36px;
+    width: 80%;
+    height: 298px;
+   max-width: 80%;
+    min-height: 298px;
+ }
   #mapa {
     align-self: center;
     margin-top: 36px;
     width: 80%;
     height: 298px;
+    max-width: 80%;
+    min-height: 298px;
   }
+
   
+  
+
+
+
+
+
+
+
+
   #dados-instituição {
     justify-content: flex-start;
     color: #000;

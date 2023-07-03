@@ -8,6 +8,6 @@ export interface instituicao_interface{
     imagem: string;
     usuario_id: number;
     descricao: string;
-    data_criacao: string
+    data_criacao: string;
 
 }
