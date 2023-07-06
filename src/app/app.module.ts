@@ -13,6 +13,7 @@ import { InstituicaoComponent } from './components/instituicao/instituicao.compo
 import { AnunciosComponent } from './components/anuncios/anuncios.component';
 import { LoginComponent } from './components/login/login.component';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -32,8 +33,8 @@ import { CadastroComponent } from './components/cadastro/cadastro.component';
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
-    NgxMapLibreGLModule
-
+    NgxMapLibreGLModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
