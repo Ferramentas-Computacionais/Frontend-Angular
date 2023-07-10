@@ -1,38 +1,42 @@
 
-    <body>
-        <!--Barra de Navegação-->
-        <div class="navbar-custom"></div>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">
-                <img src="../assets/images/logos/logo_header.jpg" width="60" height="60" > 
-              </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Quem Somos?</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Instituições</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contate-nos</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        
-    
-        <div>
+<div class="navbar-custom"></div>
+<header>
+<!--Barra de Navegação-->
+<div class="container">
+<div class="row">
+  <div class="col-md-3 col-sm-3 col-3">
+    <div class="logo">
+      <a class="navbar-brand" href="#">
+        <img src="../assets/images/logos/logo_header.jpg" width="60" height="60">
+      </a>
+    </div>
+  </div>
+  <div class="col-md-9 col-sm-9 col-9 text-end">
+    <div class="menu_icon"  [class.menu_icon_Class]="menu_icon_variable"  (click)="openMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
 
-        <router-outlet></router-outlet>
 
-        </div>
+    </div>
+    <div class="menu"[class.menuClass]="menuVariable">
+      <ul>
+        <li><a class="nav-link" href="#">Home</a></li>
+        <li><a class="nav-link" href="#">Quem Somos?</a></li>
+        <li><a class="nav-link" href="#">Instituições</a></li>
+        <li><a class="nav-link" href="#">Contate-nos</a></li>
 
-</body>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+</div>
+
+
   
+</header>  
+<div>
+  <router-outlet></router-outlet>
+</div>
