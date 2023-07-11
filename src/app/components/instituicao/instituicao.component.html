@@ -33,12 +33,12 @@
           {{ instituicoes.descricao }}
         </h2>
       </div>
-      <div id="mapa"> 
-        
-        <div id="mapid"></div>
+        <div id="mapa" (load)="coord(instituicoes.coordenadas)">
           
+          <div id="mapid"></div>
+        </div>
        
-    </div>
+   
     </div>
   </div>
   
@@ -60,6 +60,7 @@
     
     <div class="col">
       <div class="d-flex">
+        <!-- aqui vai uma imagem-->
         <img src="/05 1.png">
       </div>
     </div>
