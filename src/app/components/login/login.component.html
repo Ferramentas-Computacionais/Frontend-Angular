@@ -1,8 +1,34 @@
-<div class="mb-3">
-    <label for="formGroupExampleInput" class="form-label">Login</label>
-    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="E-mail">
-  </div>
-  <div class="mb-3">
-    <label for="formGroupExampleInput2" class="form-label">Senha</label>
-    <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Senha">
-  </div>
+<script src="https://kit.fontawesome.com/25bc616b49.js" crossorigin="anonymous"></script>
+
+<link href="./login.component.scss" rel="stylesheet">
+
+  
+<div class="container">
+  <h2 class="my-2">Login</h2>
+  <div></div>
+    <a href="https://pt-br.facebook.com" target="_blank"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAADK0lEQVR4nO2Zz08TQRTHNzM0MQHixaMnI2jE4Mmr/4A/okej3r0oAn+AiYke9IYkpDNFDAkRqokHL4bEEzFelIqAJP5IDPvetrXQAhXSsrRjplYMboGdnd0th/0m79TN7Pcz8+bN7KthRIoUKZJUbNg8Qxj0UYZJwnCGcsxTjpv1yBOGH2u/cbNXPmscCCVy7YRDP2XwmXIUSsFgXgIbg9m28I3fFS1yJinDZWXjDhBcIgzvyDHDMR/Hk4RjStv4f0EYThsJOBGodxqHS5RD0W/z9F9arVEOFwMxTxLWDcrBDsw8/xtgE25dD2LmQzCP2xCUwQV/3A+ZHX+WVs9U24glOiey4uzLn6LreVZ0jGfE4afWXhBFud98qDbeN2wLR3H1TV5Mpctis1IVjXR5cnn3jc3hg1Z1qpVKj+YPDVti4vuG2E9X9gCoQcSxx5v70XQr5ZDzCvBwpriveTcA8pyQB6aH2Yd+r+aPjmVEeZeUUQbg8oyAPmUAT9eDevS+W2lotlCuiPupNXFzqrAdx55l9h+TwbySeXnZ0qk4498a5/65VznPY8YS6dOhpI+Mt5myw/zs8qbn8ajqZpbXXp2XzeVtB8DY1w0tAMpwXGEF8JPOyxYKToDHc7/0VoBjSmUFlvwGGNAEoBxyKgDlgweApUAA7k2viXypsiO2GhwBpa2q47l8qSK6X2QDAXCdQo9cnriNVBVCtI9Y/qeQyibWAfhR3ApsEyfDAJiEUkBlVLZHQgAYUNjYhONt1wAxbnarfKgcGU3viC8rzirEFtYdz7U+cZv/KGIs3eUaoL4KswolLtgyyhQvc6ppFDQA4WZvqB80vgIwXPLcvZMds2YDEIa3DK2PeobTzQIgHN4bSUENLfHF45TBavgA4ENbpS7Z7lNpbOkDgE0T5nnDT8l2n1sIPQCwCcNrRhCS7T43XTrPAAxWfZ95hxh0yo6Z3wBEbtghs8MIRbI6xbFnt2u3GgDkaqVSu9p40WC2TZ7YhMOcKoC8qhB5wjblL6YGkpet2qpwnHhtlgqLRbuybleFDLNoVx6kVi15Ja61R4atU832GylSJONg6DekIcfGE7hs2QAAAABJRU5ErkJggg==" target="_blank"></a>
+    <a href="https://accounts.google.com/InteractiveLogin/signinchooser?flowEntry=ServiceLogin&flowName=GlifWebSignIn&hl=pt-BR&ifkv=AeDOFXhpbUhWfwST3ebNzELpokhIBhJEot9hb-5liBusuEh6r6bz-4PdhZliWpfTeixkZOjL0a_0ow" target="_blank"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAYAAABXuSs3AAAACXBIWXMAAAsTAAALEwEAmpwYAAAExElEQVR4nO2Xb0wTdxjHz/17uTcb6DS8WRwacgf0rp2pgIXSdgxaikYSEUTHf5agA0wIILRFigKFaHHORWARszFdQlt6HfJvdyQu0dFkezE3GJrsDcjoH0MZgm3htxwLE5AeV3qlJOObfN9c0+f3ueee5/n9fhC0ox0FRoAQvDGtCQ91VEUKKD+riIgEitS3oO2mvxvC9tjORXw+dQYd+UuGzY1H8cA4f7UnonlgUorNWzLRUdu5yJYZNbw7YMD2Co7Mcgp7PC54FXRDH+EBayY2ai/jyLYMeKYMQyynscfjhzcBzF/jwzwwdRodcSg+DPMrtK0UrR2P5y76DMxfU0rx3AXbWfQi68AAQLus+SjJSpb5nrNvy+P0sQetgF6zZqO/+A2Y/9KWHPQha+DWQpTYCmjrJ+gwa9DPPuPUeVUeUTwwmYLNUs1rzUGHrVmoeSoDe0I9o4tjYTPTDjV2kGkjPpVw3bZCTpej0fN0mCnlwtZP0e4JEXfBb9CULGfQMSYNZcnmPHCURwYxjetQYO9as/7tGdahXxDh8PRlzuJEDNfzCIvmAXsx2rTZNezFnAyIbTlJpMNFImCuMwJMyrF1M+0LtF8EHux/20nAzylwys5+BNhLOaubKYvlT8yG3AScsQy90jPaCDARxwVPxZh7uo73DrTd5CKR9vXAKc93hQP7BU4rtB3lIpBHnsCdBLII7nP2Mo0Vdb5z1lfzS+84Eira/9zwEuAkkBeewF0k4tXuFpRLAja8L38AKBQKz5cRMHTwPRpo4CTgrwMBHpRLAnVjOexxoXky8gM6cBeJNAYKvEpTHr95cALRBAq8srlS5HEhQITtoS0VEv4mUOCKBkW4L81pDgT43vxB+uZkMg5tQ9wQpuBMRx6v5Lt5OnBeyd35DRdzEUjbupsPiYD2nlhQh4u6IZaVo9b00IGfVGkfbRjEPQSnr4We+IEDio0fA6kuBWTopQsdP/KD2YJW3yzfHXa2200Hfl6jamZ6yJpdhn7Yfwik6WVL0MtW4hKvap1O6Urtz3TQIQV9oLi2dh+jYE4CvuUkEXDnXgyQ6eWroCnLdCmg2SS87it0Sb36anAeQduYacpro4wDzhDhcJVRsrgWeKWP6uSgxSS8ulnoovpLLdRWTgdNvVRZs0ruVWCVUTxCB76c+RpcZPam5jt6xcFKPMGcUqPdcAweq7ox5nVGuvqjQ9P0UtqsLzvTkOS+jIu6daYjiKd4rT0fHbhkijed0kvdSy/ddRRkNCmXsroe9PuFPYvljWrP5xM63TDGqZIZgL/8AnKQb0h8fgGXPLmIi8w1RvFwJS4eo55Rv0nX+U/2zSIQUtD/CnhubZNvV8NGk3CAKfhmnXkrG4QW4f9Bn1Beuw+xIQ0u/Mnf8Cc608Gh0m/B8eovfoUgsAtiSw14/KDMj+AynRzU6xP6WIVeViseq0g3SBfYhj6ply1cN8WpIH/q9oAwTGkUj8pZAE7WpQAFLh65PRh3ANoqfdUTk1SFS/5I1SUzGpkrfUwnB9VGyWgrHpsEBUq9vfzgK0ahVmkU/1ZgSJyTe9hl8wyJc9W4+Hft93FX2DyksSZwN/V1wz3B/ra+aEFbX6yg1SiGzV/mvRlorh39b/UPVMrRgx/wqq8AAAAASUVORK5CYII=" target="_blank"></a>
+    <a href="https://www.linkedin.com/home" target="_blank"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAACEklEQVR4nO2YO08CQRDH11jYGisTW7X1E1jZKcTSL2EQJHJbEAsJiZ2FhZ2FpbWFDY/IO0YN3GIEiQWFxhhBER8oMGZvFVC4wJ3mbi/ZfzIh7GyW+e3Mzh2LkJCQkBDfkrKLSCJhhEkVYQIGWRVhEkKSbP9b8FjeNDBoUDG//p03P3hgJtt0AChlw0HwBJBEgjoA5CeOMlDRDqC2mCcNyJUEtBJjn/S7ERCapRL8tC8FR5dlqNbqECmUYWojZQyEZvVaxJVUgu5UOF9mmbAEwEpM2flOPb3VWTlZAsBl9Qx42BmgEDQToXwJJi11BrDVu5AzAcgR7TY63s8vZQC5j9tznF8bsHZK+7xBAI4I9BId7+ef8CZhK1iE7HUVXt8b8PDyoZTi8n4ORtyJ/pk0E2DGn4LbSg3UdFKswLg3ybLEI0Dh7gX6KZQvwZArzifAoJrfyaiXkpkAjWZTqf+57TQs7WYhcFHqOW8vdcMOOm8A6wdXLDBa4540DK8m4PD8vmte7va53dF4AhjD8Z+t0pOG2a2zrnmPrx/qryVmATSbHf6WyTAqJVTmRvkCYP6o9rWwACAiA98SJYTFISaiCyHRRv/lH1mcPWh+Gx0fxK9lLfzXBxlPV4uS/KgdgN7Pmx04br07BfRkwM5PBjIL2gFYFvymB4+JT1/wLQjZptzPG3kmJPpbckD/zgsJCQkhg/QJ3PVUWJ5Zt98AAAAASUVORK5CYII=" target="_blank"></a>
+   <form>
+
+
+<form>
+      <div class="form-floating mb-3">
+        <i class="envelope fa-solid fa-envelope fa-lg"></i>
+        <input type="Email" class="form-control" id="floatingEmail" placeholder="Email">
+        <label for="floatingEmail">Email</label>
+    </div>
+      <div class="form-floating mb-3">
+        <i class="lock fa-solid fa-lock fa-lg"></i>
+        <input type="Senha" class="form-control" id="floatingSenha" placeholder="Senha">
+        <label for="floatingSenha">Senha</label>
+
+
+
+      </div>
+    
+  </form>
+ 
+
+
+<button type="button" class="btn btn-link">Esqueceu sua senha?</button>
