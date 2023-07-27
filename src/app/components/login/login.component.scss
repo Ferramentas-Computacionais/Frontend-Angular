@@ -1,0 +1,62 @@
+body{
+    background-color: aliceblue;
+}
+h2, .h2 {
+    width: 214px;
+    height: 94px;
+    flex-shrink: 0;
+    color: #59BCC8;
+    text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    font-family: Inter;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+}
+.form-control {
+    width: 477px;
+    height: 62px;
+    flex-shrink: 0;
+    border-radius: 96px;
+    background: #E4E4E4;
+
+}
+.form-floating{
+    position: relative;
+    color: #574B4B;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+}
+.envelope{
+    position: absolute;
+    top:calc(50%);
+    left: 1.25rem;
+} 
+.form-floating label, .form-floating .form-control{
+    left: .5rem;
+    padding-left: 3.5rem;
+}
+.lock{
+    position: absolute;
+    top:calc(50%);
+    left: 1.25rem;
+
+}
+
+.btn-link{
+    width: 477px;
+    height: 62px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+}
+
