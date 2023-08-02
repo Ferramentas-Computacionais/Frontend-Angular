@@ -3,18 +3,19 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 import { AuthData } from '../interfaces/auth-data_interface'; // Importe a interface aqui
+import { ConstantsService } from '../services/constants.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AutenticacaoService {
-  private apiUrl = 'http://127.0.0.1:5000'; // URL do endpoint de autenticação no backend
+  // URL do endpoint de autenticação no backend
   private accessTokenKey = 'access_token';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private constantsService: ConstantsService) { }
 
   login(authData: AuthData): Observable<any> {
-    return this.http.post<any>(`${this.apiUrl}/login`, authData).pipe(
+    return this.http.post<any>(`${this.constantsService.API_BASE_URL}/login`, authData).pipe(
       tap(response => {
         if (response && response.access_token) {
           localStorage.setItem(this.accessTokenKey, response.access_token);

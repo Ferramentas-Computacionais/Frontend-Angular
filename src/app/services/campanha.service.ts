@@ -1,21 +1,24 @@
-import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 import { campanha_interface } from '../interfaces/campanha_interface';
+import { ConstantsService } from '../services/constants.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CampanhaService {
 
-  constructor(private httpclient: HttpClient) { }
+  constructor(
+    private httpclient: HttpClient,
+    private constantsService: ConstantsService
+  ) { }
 
-  obter(){
-    return this.httpclient.get<campanha_interface[]>("http://127.0.0.1:5000/mostrar-campanha/3")
-    
+  obter() {
+    return this.httpclient.get<campanha_interface[]>(`${this.constantsService.API_BASE_URL}/mostrar-campanha/3`);
   }
 
   obter_por_id(userId: number) {
-    return this.httpclient.get<campanha_interface[]>(`http://127.0.0.1:5000/campanhas/${userId}`);
+    return this.httpclient.get<campanha_interface[]>(`${this.constantsService.API_BASE_URL}/campanhas/${userId}`);
   }
-  
+
 }

@@ -38,11 +38,14 @@ header{
 
   .menu{
     position: fixed;
+    position: fixed;
     top: 127px;
     background: #F1EBEB;
     right: -280px;
     height: 100%;
     width: 280px;
+    z-index: 999; 
+
   }
   .menu ul li  {
     display: block;
