@@ -1,12 +1,116 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30vh;
+}
+.content{
+    border-radius: 15px;
+    width: 80%;
+    height: 50%;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
 
-.text-center .btn-primary{
+.first-column{
+    text-align: center;
+    flex: 1 0 auto;
+    z-index: 1;
+}
+.second-column{
+    flex: 2 0 auto;
+
+}
+.list-social-media{
+    display: flex;
+    list-style-type: none;
+}
+.item-social-media{
+    border: 1px solid #bdc3c7;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+}
+.item-social-media a{
+    color:#95a5a6;
+
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+}
+.form input{
+    height: 45px;
+    border: none;
+    background-color: #E4E4E4;
+    margin: 8px;
+}
+.content::before{
+    content:"";
+    position: absolute;
+    background-color:#59BCC8 ;
+    width:  40%;
+    height: 100%;
+}
+.title{
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.title-primary{
+    color:white;
+}
+.title-second{
+    color: #59BCC8;
+}
+.description{
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 30px;
+}
+.description-primary{
+    color: white;
+}
+.description-second{
+
+}
+.btn{
+    border-radius: 15px;
+    text-transform: uppercase;
     color: black;
     background-color: #FFE016;
-    border: 0px solid #847E03;
+    font-size: 10px;
+    padding: 10px 30px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 150px;
+    align-self: center;
+    border: none;
+}
+.btn-primary{
     border-radius: 100px;
-    font-size: 16px;
-    font-family: Arial;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal
+    border: 0px solid #847E03;
+    background-color: #FFE016;
+   
+}
+.btn-primary:hover{
+    background-color: white;
+    color: black;
+}
+.first-content{
+    display: flex;
+    position: relative;
 }
