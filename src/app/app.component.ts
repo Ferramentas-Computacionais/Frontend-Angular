@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AutenticacaoService } from 'src/app/services/autenticacao.service';
 
 @Component({
   selector: 'app-root',
@@ -7,19 +8,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AjuDoe';
- 
+  menuVariable: boolean = false;
+  menu_icon_variable: boolean = false;
 
-  
-  constructor() {
-    
-  }
-  //se isso aqui for verdadeiro o elemento que ta linkado com essa classe fica visivel 
-  menuVariable:Boolean = false; 
-  menu_icon_variable:Boolean = false;
-  // função que faz os elementos que eu falei em cima ficarem visiveis
-  openMenu(){
-    this.menuVariable =! this.menuVariable;
-    this.menu_icon_variable =! this.menu_icon_variable;
+  constructor(private authService: AutenticacaoService) {}
+
+  openMenu() {
+    this.menuVariable = !this.menuVariable;
+    this.menu_icon_variable = !this.menu_icon_variable;
   }
 
+  isAuthenticated(): boolean {
+    return this.authService.isAuthenticated();
+  }
 }

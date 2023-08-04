@@ -10,11 +10,11 @@ import { FormsModule } from '@angular/forms';
 })
 export class AnunciosComponent implements OnInit {
   currentPage: number = 1;
-  pageSize: number = 2;
+  pageSize: number = 10;
   totalItems: number = 0;
 
   searchTerm: string = '';
-  sortBy: string = 'mais-recentes';
+  sortBy: string = 'ma  is-recentes';
 
   anuncios: anuncio_interface[] = [];
   originalAnuncios: anuncio_interface[] = []; 
