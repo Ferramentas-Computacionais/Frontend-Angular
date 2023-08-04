@@ -15,6 +15,7 @@ import { LoginComponent } from './components/login/login.component';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
 import { FormsModule } from '@angular/forms';
 import { CrudAnunciosComponent } from './components/crud-anuncios/crud-anuncios.component';
+import { CriacaoAnuncioComponent } from './components/criacao-anuncio/criacao-anuncio.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { CrudAnunciosComponent } from './components/crud-anuncios/crud-anuncios.
     AnunciosComponent,
     LoginComponent,
     CadastroComponent,
-    CrudAnunciosComponent
+    CrudAnunciosComponent,
+    CriacaoAnuncioComponent
 
   ],
   imports: [
