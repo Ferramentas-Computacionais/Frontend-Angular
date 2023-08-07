@@ -27,7 +27,7 @@ onCadastro(): void{
 
   }
   error => {
-    this.cadastroError = 'Credenciais inválidas. Por favor, tente novamente.';
+    this.cadastroError = 'Cadastro inválido. Por favor, tente novamente.';
 }
   );
 }
