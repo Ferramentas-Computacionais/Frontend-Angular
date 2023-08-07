@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AutenticacaoService } from 'src/app/services/autenticacao.service';
 import { AuthData } from 'src/app/interfaces/auth-data_interface';
+import { AuthService} from 'src/app/interfaces/auth-service_interface';
 
 
 
