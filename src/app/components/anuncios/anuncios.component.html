@@ -55,7 +55,7 @@
           <p class="card-description">Instituição: {{ anuncio.instituicao.nome }}</p>
           <p class="card-text">{{ anuncio.descricao }}</p>
           <div class="d-flex justify-content-center">
-            <a href="#" class="btn btn-primary btn-custom">   Ver mais   </a>
+            <a [routerLink]="['/detalhe_anuncio', anuncio.id]" class="btn btn-primary btn-custom">   Ver mais   </a>
           </div>
         </div>
       </div>
