@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, Router } from '@angular/router';
 import { AutenticacaoService } from 'src/app/services/autenticacao.service';
+import { catchError, switchMap, map } from 'rxjs/operators';
+import { of, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -8,13 +10,26 @@ import { AutenticacaoService } from 'src/app/services/autenticacao.service';
 export class AuthGuard implements CanActivate {
   constructor(private authService: AutenticacaoService, private router: Router) {}
 
-  canActivate(): boolean {
+  canActivate(): Observable<boolean> {
     if (this.authService.isAuthenticated()) {
-      return true;
+      return of(true);
     } else {
-      // Redirecionar para a página de login se o usuário não estiver autenticado
-      this.router.navigate(['/login']);
-      return false;
+      return this.authService.refreshAccessToken().pipe(
+        switchMap(() => {
+          if (this.authService.isAuthenticated()) {
+            return of(true);
+          } else {
+            // Redirecionar para a página de login se o usuário não estiver autenticado
+            this.router.navigate(['/login']);
+            return of(false);
+          }
+        }),
+        catchError(() => {
+          // Redirecionar para a página de login em caso de erro na renovação
+          this.router.navigate(['/login']);
+          return of(false);
+        })
+      );
     }
   }
 }

@@ -1,9 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 import { AuthData } from '../interfaces/auth-data_interface'; // Importe a interface aqui
 import { ConstantsService } from '../services/constants.service';
+import jwt_decode from 'jwt-decode';
+import { JwtPayload } from 'jwt-decode';
 
 @Injectable({
   providedIn: 'root'
@@ -45,7 +47,31 @@ export class AutenticacaoService {
   }
 
   private isTokenExpired(token: string): boolean {
-    // Implemente a lógica para verificar se o token expirou
-    return false; // Implemente a lógica correta aqui
+    const decodedToken: JwtPayload = jwt_decode(token);
+    const currentTime = Date.now() / 1000;
+    
+    return decodedToken.exp !== undefined && decodedToken.exp < currentTime
   }
+  refreshAccessToken(): Observable<any> {
+    const refreshToken = localStorage.getItem('refresh_token'); // Supondo que você armazene o refresh token localmente
+  
+    if (!refreshToken) {
+      return throwError('Refresh token not available');
+    }
+  
+    const refreshTokenData = {
+      refresh_token: refreshToken
+    };
+  
+    return this.http.post<any>(`${this.constantsService.API_BASE_URL}/refresh-token`, refreshTokenData).pipe(
+      tap(response => {
+        if (response && response.access_token) {
+          localStorage.setItem(this.accessTokenKey, response.access_token);
+        }
+      })
+    );
+  }
+  
 }
+
+

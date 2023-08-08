@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AnuncioService } from 'src/app/services/anuncio.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-criacao-anuncio',
@@ -10,7 +11,7 @@ export class CriacaoAnuncioComponent {
 
   selectedImagemAnuncio: File | undefined;
 
-  constructor(private anuncioService: AnuncioService) {} // Injete o serviço
+  constructor(private anuncioService: AnuncioService, private router: Router) {} // Injete o serviço
 
   onImagemAnuncioChange(event: any) {
     this.selectedImagemAnuncio = event.target.files[0];
@@ -35,10 +36,13 @@ export class CriacaoAnuncioComponent {
     this.anuncioService.criarAnuncio(novoAnuncio).subscribe(
       response => {
         console.log('Anúncio criado:', response);
-        // Faça ações adicionais, se necessário
+        // Exiba um alerta para o usuário
+        alert('Anúncio criado com sucesso!');
+        // Redirecione para a página "meus-anuncios"
+        this.router.navigate(['/meus_anuncios']);
       },
       error => {
-        console.error('Erro ao criar anúncio:', error);
+        alert('Anúncio não criado com sucesso!');
       }
     );
   }
