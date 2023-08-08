@@ -9,6 +9,7 @@ import { ConstantsService } from '../services/constants.service';
   providedIn: 'root'
 })
 export class AutenticacaoService {
+
   // URL do endpoint de autenticação no backend
   private accessTokenKey = 'access_token';
 
@@ -19,10 +20,15 @@ export class AutenticacaoService {
       tap(response => {
         if (response && response.access_token) {
           localStorage.setItem(this.accessTokenKey, response.access_token);
+          if (response.usuario_id) {
+            localStorage.setItem('usuario_id', response.usuario_id.toString());
+          }
         }
       })
     );
   }
+  
+  
 
   logout(): void {
     localStorage.removeItem(this.accessTokenKey);
