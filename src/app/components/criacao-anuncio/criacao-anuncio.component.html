@@ -18,7 +18,7 @@
         </div>
         <div class="mb-3">
           <label for="imagemAnuncio" class="form-label">Imagem do Anúncio:</label>
-          <input type="file" class="form-control" id="imagemAnuncio" name="imagemAnuncio" accept="image/*" required ngModel>
+          <input type="file" class="form-control" id="imagemAnuncio" name="imagemAnuncio" accept="image/*" (change)="onImagemAnuncioChange($event)" required ngModel>
         </div>
         <div class="d-flex justify-content-center mt-4">
           <button type="submit" class="btn btn-primary">Criar Anúncio</button>

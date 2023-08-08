@@ -8,7 +8,13 @@ import { AnuncioService } from 'src/app/services/anuncio.service';
 })
 export class CriacaoAnuncioComponent {
 
+  selectedImagemAnuncio: File | undefined;
+
   constructor(private anuncioService: AnuncioService) {} // Injete o serviço
+
+  onImagemAnuncioChange(event: any) {
+    this.selectedImagemAnuncio = event.target.files[0];
+  }
 
   criarNovoAnuncio(form: any) {
     if (form.invalid) {
@@ -17,12 +23,14 @@ export class CriacaoAnuncioComponent {
 
     const nomeAnuncio = form.value.nomeAnuncio;
     const descricaoAnuncio = form.value.descricaoAnuncio;
-    const imagemAnuncio = form.value.imagemAnuncio;
 
-    const novoAnuncio = new FormData(); // Usar FormData para enviar arquivos
+    const novoAnuncio = new FormData();
     novoAnuncio.append('nome', nomeAnuncio);
     novoAnuncio.append('descricao', descricaoAnuncio);
-    novoAnuncio.append('imagem', imagemAnuncio); // Certifique-se de que 'imagemAnuncio' seja o nome correto do input file no formulário
+
+    if (this.selectedImagemAnuncio) {
+      novoAnuncio.append('imagem', this.selectedImagemAnuncio);
+    }
 
     this.anuncioService.criarAnuncio(novoAnuncio).subscribe(
       response => {

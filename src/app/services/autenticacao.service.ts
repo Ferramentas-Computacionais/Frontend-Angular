@@ -27,7 +27,7 @@ export class AutenticacaoService {
       })
     );
   }
-  
+
   
 
   logout(): void {

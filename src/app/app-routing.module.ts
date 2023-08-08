@@ -18,7 +18,7 @@ const routes: Routes = [
   {path:'login',component: LoginComponent},
   {path: 'cadastro',component: CadastroComponent},
   {path: 'meus_anuncios',component: CrudAnunciosComponent, canActivate: [AuthGuard]},
-  {path: 'criacao_anuncio/:id',component: CriacaoAnuncioComponent, canActivate: [AuthGuard]},
+  {path: 'criacao_anuncio',component: CriacaoAnuncioComponent, canActivate: [AuthGuard]},
   {path: 'detalhe_anuncio/:id',component: CadastroComponent},
 
 
