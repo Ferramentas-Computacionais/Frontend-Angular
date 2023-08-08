@@ -1,0 +1,75 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    border: none;
+    outline: 0;
+    font-family: "Open Sans";
+    font-size: 17px;
+}
+
+.caixa {
+    display: inline-block;
+    width: 50%;
+    height: 50%;
+    text-align: justify;
+    padding-left: 5%;
+}
+
+.caixa2 {
+    display: inline-block;
+    vertical-align: top; 
+    margin-left: 12.5%; 
+    position: relative;
+}
+
+
+.canto {
+    display: flex;
+    transform: rotate(180deg);
+    bottom: 0;
+    right: 0;
+    position: relative;
+}
+
+p {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+@media only screen and (max-width: 800px) {
+    .caixa {
+        width: 90%;
+        text-align: justify; 
+        font-size: 14px;
+        display: block;
+    }
+
+    .caixa2 {
+        display: flex;
+        margin-top: 50px;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .caixa {
+        width: 90%;
+        text-align: justify; 
+        font-size: 10px;
+        display: block;
+    }
+
+    .caixa2 {
+        display: flex;
+        margin-top: 50px;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0%;
+    }
+}
