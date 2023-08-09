@@ -16,7 +16,7 @@ import { CadastroComponent } from './components/cadastro/cadastro.component';
 import { FormsModule } from '@angular/forms';
 import { CrudAnunciosComponent } from './components/crud-anuncios/crud-anuncios.component';
 import { CriacaoAnuncioComponent } from './components/criacao-anuncio/criacao-anuncio.component';
-import { DetalheAnuncioComponent } from './detalhe-anuncio/detalhe-anuncio.component';
+import { DetalheAnuncioComponent } from './components/detalhe-anuncio/detalhe-anuncio.component';
 
 @NgModule({
   declarations: [

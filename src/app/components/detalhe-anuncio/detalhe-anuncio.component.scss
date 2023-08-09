@@ -1,0 +1,117 @@
+
+#frameMaior{
+    border: 1px;
+    background-color: aqua;
+    width: 100%;
+    height:200%;
+    padding-bottom: 55px;
+
+}
+#frameMenor{
+    border: 1px;
+    background-color: white;
+    padding-bottom: 96px;
+    border-radius: 25px;
+    
+    margin-left: 69px;
+    margin-right: 69px;
+}
+#logoInstituicao{
+    background-color: black;
+    border: 1px;
+    width: 479px;
+    height: 453px;
+    flex-shrink: 0;
+    margin-left: 84px; 
+    margin-top:  39px ;
+}
+#dadosInstituicao{
+    margin-top: 39px;
+    text-align:center;
+}
+#nomeInstituicao{
+    margin-top: 12px;
+
+    height: 51px;
+    color: #000;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+#nomeAnuncio{
+    margin-top: 12px;
+
+    color: #000;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+   
+}
+#tipoDoacao{
+    margin-top: 12px;
+
+    color: #000;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#dataAnuncio{
+    margin-top: 12px;
+
+    color: #000;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+#btnqueroDoar{
+    color: #000;
+    font-family: Inter;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: 402px;
+    height: 74px;
+    margin-top: 12px;
+    flex-shrink: 0;
+    border-radius: 100px;
+    background: #FFE114;
+}
+#descricaoAnunciolt{
+    margin-top: 64px;
+    margin-left: 84px; 
+    color: #000;
+    font-family: Inter;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+#descricaoAnuncio{
+    margin-left: 84px; 
+    height: 195px;
+    color: #000;
+    text-align: justify;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-right: 93px ;
+}
+#mapid{
+    line-height: normal;
+    border: 1px solid black;
+    height: 404px;
+    margin-left: 84px;
+    margin-right: 84px;
+    padding-bottom: 96px;
+}

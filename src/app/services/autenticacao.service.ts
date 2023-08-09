@@ -4,8 +4,7 @@ import { Observable, throwError } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 import { AuthData } from '../interfaces/auth-data_interface'; // Importe a interface aqui
 import { ConstantsService } from '../services/constants.service';
-import jwt_decode from 'jwt-decode';
-import { JwtPayload } from 'jwt-decode';
+import jwt_decode, { JwtPayload } from 'jwt-decode';
 
 @Injectable({
   providedIn: 'root'
