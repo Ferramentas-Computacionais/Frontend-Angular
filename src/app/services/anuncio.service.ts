@@ -31,5 +31,12 @@ export class AnuncioService {
 
     return this.httpclient.post(`${this.constantsService.API_BASE_URL}/create-anuncio`, data, { headers });
   }
+  excluirAnuncio(anuncioId: number) {
+    const headers = new HttpHeaders({
+      'Authorization': 'Bearer ' + localStorage.getItem('access_token')
+    });
+
+    return this.httpclient.delete(`${this.constantsService.API_BASE_URL}/delete-anuncio/${anuncioId}`, { headers });
+  }
 
 }

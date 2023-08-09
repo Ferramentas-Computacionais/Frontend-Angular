@@ -33,4 +33,17 @@ export class CrudAnunciosComponent implements OnInit {
       );
     }
   }
+  excluirAnuncio(anuncio: anuncio_interface): void {
+    if (confirm('Tem certeza de que deseja excluir este anúncio?')) {
+      this.anuncioService.excluirAnuncio(anuncio.id).subscribe(
+        () => {
+          // Atualize a lista de anúncios após a exclusão
+          this.anuncios = this.anuncios.filter(a => a.id !== anuncio.id);
+        },
+        (error) => {
+          console.error('Erro ao excluir anúncio:', error);
+        }
+      );
+    }
+  }
 }
