@@ -14,7 +14,6 @@ body {
 .caixa {
     display: inline-block;
     width: 50%;
-    height: 50%;
     text-align: justify;
     padding-left: 5%;
 }
@@ -22,17 +21,13 @@ body {
 .caixa2 {
     display: inline-block;
     vertical-align: top; 
-    margin-left: 12.5%; 
-    position: relative;
+    margin-left: 10%; 
 }
 
-
 .canto {
-    display: flex;
     transform: rotate(180deg);
     bottom: 0;
     right: 0;
-    position: relative;
 }
 
 p {
@@ -40,28 +35,15 @@ p {
     margin-bottom: 16px;
 }
 
-@media only screen and (max-width: 800px) {
-    .caixa {
-        width: 90%;
-        text-align: justify; 
-        font-size: 14px;
-        display: block;
-    }
-
-    .caixa2 {
-        display: flex;
-        margin-top: 50px;
-        align-items: center;
-        justify-content: center;
-        margin-left: 0%;
-    }
+.conteiner {
+    max-width: 100%; 
+    overflow: hidden; 
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1200px) {
     .caixa {
         width: 90%;
-        text-align: justify; 
-        font-size: 10px;
+        font-size: 14px;
         display: block;
     }
 
