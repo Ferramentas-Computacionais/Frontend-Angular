@@ -17,6 +17,8 @@ import { FormsModule } from '@angular/forms';
 import { CrudAnunciosComponent } from './components/crud-anuncios/crud-anuncios.component';
 import { CriacaoAnuncioComponent } from './components/criacao-anuncio/criacao-anuncio.component';
 import { DetalheAnuncioComponent } from './components/detalhe-anuncio/detalhe-anuncio.component';
+import { CriacaoCampanhaComponent } from './components/criacao-campanha/criacao-campanha.component';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { DetalheAnuncioComponent } from './components/detalhe-anuncio/detalhe-an
     CadastroComponent,
     CrudAnunciosComponent,
     CriacaoAnuncioComponent,
-    DetalheAnuncioComponent
+    DetalheAnuncioComponent,
+    CriacaoCampanhaComponent
 
   ],
   imports: [
@@ -40,7 +43,9 @@ import { DetalheAnuncioComponent } from './components/detalhe-anuncio/detalhe-an
     AppRoutingModule,
     HttpClientModule,
     NgxMapLibreGLModule,
-    FormsModule
+    FormsModule,
+    ToastrModule.forRoot() 
+
   ],
   providers: [],
   bootstrap: [AppComponent]

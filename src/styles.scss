@@ -6,3 +6,21 @@
     font-family: Open Sans;
 
 }
+
+/* styles.scss */
+
+// Customize toastr styling
+.toast {
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+  }
+  
+  .toast-error {
+    background-color: #ff0000;
+  }
+  
+  .toast-success {
+    background-color: #00ff00;
+  }
+  

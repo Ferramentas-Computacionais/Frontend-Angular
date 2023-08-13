@@ -8,6 +8,7 @@ import { CadastroComponent } from './components/cadastro/cadastro.component';
 import { CrudAnunciosComponent } from './components/crud-anuncios/crud-anuncios.component';
 import { CriacaoAnuncioComponent} from './components/criacao-anuncio/criacao-anuncio.component';
 import {DetalheAnuncioComponent} from './components/detalhe-anuncio/detalhe-anuncio.component';
+import {CriacaoCampanhaComponent} from './components/criacao-campanha/criacao-campanha.component';
 
 import { AppComponent } from './app.component';
 import { AuthGuard } from './auth.guard'
@@ -19,6 +20,8 @@ const routes: Routes = [
   {path: 'cadastro',component: CadastroComponent},
   {path: 'meus_anuncios',component: CrudAnunciosComponent, canActivate: [AuthGuard]},
   {path: 'criacao_anuncio',component: CriacaoAnuncioComponent, canActivate: [AuthGuard]},
+  {path: 'criacao_campanha',component: CriacaoCampanhaComponent, canActivate: [AuthGuard]},
+
   {path: 'detalhe_anuncio/:id',component: DetalheAnuncioComponent},
 
 

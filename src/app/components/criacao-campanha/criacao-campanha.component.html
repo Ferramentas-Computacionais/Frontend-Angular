@@ -1,0 +1,30 @@
+<div class="container">
+    <!-- Seção Criação de Campanha -->
+    <div class="row mt-4">
+      <div class="col-12">
+        <h1 class="text-center">Criação de Campanha</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <form #createForm="ngForm" (ngSubmit)="criarNovaCampanha()" enctype="multipart/form-data">
+          <div class="mb-3">
+            <label for="nomeCampanha" class="form-label">Nome da Campanha:</label>
+            <input type="text" class="form-control" id="nomeCampanha" name="nomeCampanha" required [(ngModel)]="nomeCampanha">
+          </div>
+          <div class="mb-3">
+            <label for="descricaoCampanha" class="form-label">Descrição da Campanha:</label>
+            <textarea class="form-control" id="descricaoCampanha" name="descricaoCampanha" required [(ngModel)]="descricaoCampanha"></textarea>
+          </div>
+          <div class="mb-3">
+            <label for="imagemCampanha" class="form-label">Imagem da Campanha:</label>
+            <input type="file" class="form-control" id="imagemCampanha" name="imagemCampanha" accept="image/*" (change)="onImagemCampanhaChange($event)" required>
+          </div>
+          <div class="d-flex justify-content-center mt-4">
+            <button type="submit" class="btn btn-primary">Criar Campanha</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  
