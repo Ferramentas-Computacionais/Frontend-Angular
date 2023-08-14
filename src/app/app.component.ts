@@ -21,4 +21,7 @@ export class AppComponent {
   isAuthenticated(): boolean {
     return this.authService.isAuthenticated();
   }
+  getUserType(): string | null {
+    return localStorage.getItem('usuario_tipo');
+  }
 }

@@ -25,8 +25,13 @@
         <li><a class="nav-link" href="#">Quem Somos?</a></li>
         <li><a class="nav-link" href="#">Instituições</a></li>
         <li><a class="nav-link" href="#">Contate-nos</a></li>
-        <li *ngIf="isAuthenticated()"><a class="nav-link" routerLink="/meus_anuncios">Meus Anúncios</a></li>
-
+        <li *ngIf="isAuthenticated() && getUserType() === 'usuario_comum'">
+          <a class="nav-link" routerLink="/meus_anuncios">Meus Anúncios</a>
+        </li>
+        <li *ngIf="isAuthenticated() && getUserType() === 'usuario_especial'">
+          <a class="nav-link" routerLink="/admin">Administrar Site</a>
+        </li>
+        
       </ul>
     </div>
   </div>

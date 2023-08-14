@@ -19,6 +19,7 @@ import { CriacaoAnuncioComponent } from './components/criacao-anuncio/criacao-an
 import { DetalheAnuncioComponent } from './components/detalhe-anuncio/detalhe-anuncio.component';
 import { CriacaoCampanhaComponent } from './components/criacao-campanha/criacao-campanha.component';
 import { ToastrModule } from 'ngx-toastr';
+import { AdminComponent } from './components/admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ToastrModule } from 'ngx-toastr';
     CrudAnunciosComponent,
     CriacaoAnuncioComponent,
     DetalheAnuncioComponent,
-    CriacaoCampanhaComponent
+    CriacaoCampanhaComponent,
+    AdminComponent
 
   ],
   imports: [
