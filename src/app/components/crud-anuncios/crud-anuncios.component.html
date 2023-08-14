@@ -2,10 +2,9 @@
   <!-- ... Outras seções ... -->
   <div class="row">
     <!-- Cards de anúncios -->
-    
+
     <div class="col-lg-3 col-md-6 col-sm-12 mb-4" *ngFor="let anuncio of anuncios">
       <div class="card h-100">
-        
         <img [src]="anuncio.imagem" class="card-img-top" [alt]="anuncio.nome">
         <div class="card-body">
           <h3 class="card-title">{{ anuncio.nome }}</h3>
@@ -21,6 +20,7 @@
         </div>
       </div>
     </div>
+    
     <!-- Botão Criar Novo Anúncio -->
     <div class="col-lg-3 col-md-6 col-sm-12 mb-4">
       <div class="card h-100">
@@ -34,15 +34,16 @@
     </div>
   </div>
 </div>
+
   
       <!-- Seção Minha Campanha -->
 
-      <div class="row mt-4">
-        <div class="col-12">
+      <div class="row mt-4 mb-">
+        <div class="container">
           <h1 class="text-center">Minha Campanha</h1>
         </div>
       </div>
-      <div class="row">
+      <div class="row d-flex justify-content-center">
         <!-- Cards de campanhas -->
         <div class="col-lg-3 col-md-6 col-sm-12 mb-4" *ngFor="let campanha of minhaCampanha">
           <div class="card h-100">
@@ -61,7 +62,6 @@
             </div>
           </div>
         </div>
-      {{minhaCampanha[0].nome}}
         <!-- Opção de criar campanha (se não existir) -->
         <div class="col-lg-3 col-md-6 col-sm-12 mb-4" *ngIf="minhaCampanha.length === 0">
           <div class="card h-100">
@@ -75,3 +75,5 @@
           </div>
         </div>
       </div>
+
+      

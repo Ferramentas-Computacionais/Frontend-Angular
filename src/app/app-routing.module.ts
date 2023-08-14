@@ -11,11 +11,15 @@ import {DetalheAnuncioComponent} from './components/detalhe-anuncio/detalhe-anun
 import {CriacaoCampanhaComponent} from './components/criacao-campanha/criacao-campanha.component';
 
 import { AppComponent } from './app.component';
+
 import { AuthGuard } from './auth.guard'
+
+import { UsuarioEspecialGuard } from './usuario-especial.guard';
+
 const routes: Routes = [
   {path:'',component: HomeComponent},
   {path:'instituicao/:id',component: InstituicaoComponent},
-  {path:'anuncios',component: AnunciosComponent},
+  {path:'anuncios',component: AnunciosComponent },
   {path:'login',component: LoginComponent},
   {path: 'cadastro',component: CadastroComponent},
   {path: 'meus_anuncios',component: CrudAnunciosComponent, canActivate: [AuthGuard]},

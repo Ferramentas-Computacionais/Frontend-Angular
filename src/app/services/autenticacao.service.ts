@@ -6,6 +6,12 @@ import { AuthData } from '../interfaces/auth-data_interface'; // Importe a inter
 import { ConstantsService } from '../services/constants.service';
 import jwt_decode, { JwtPayload } from 'jwt-decode';
 
+
+enum UserType {
+  Normal = 'normal',
+  Special = 'special'
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -21,8 +27,16 @@ export class AutenticacaoService {
       tap(response => {
         if (response && response.access_token) {
           localStorage.setItem(this.accessTokenKey, response.access_token);
+
           if (response.usuario_id) {
             localStorage.setItem('usuario_id', response.usuario_id.toString());
+            localStorage.setItem('usuario_nome', response.usuario_nome.toString());
+            if (this.hasSpecialAccess(response.usuario_nome) == true ) {
+              localStorage.setItem('usuario_tipo', 'usuario_especial');
+            } else {
+              localStorage.setItem('usuario_tipo', 'usuario_comum');
+            }
+
           }
         }
       })
@@ -70,6 +84,14 @@ export class AutenticacaoService {
       })
     );
   }
+
+  hasSpecialAccess(nome: string): boolean {
+    // Verifique se o nome do usuário corresponde aos critérios para acessos especiais
+    return nome === 'ajudoe'; // Substitua 'nome-especial' pelo nome que deve ter acessos especiais
+  
+  }
+
+  
   
 }
 

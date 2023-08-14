@@ -11,12 +11,13 @@ export class AuthGuard implements CanActivate {
   constructor(private authService: AutenticacaoService, private router: Router) {}
 
   canActivate(): Observable<boolean> {
-    if (this.authService.isAuthenticated()) {
+    const userType = localStorage.getItem('usuario_tipo');
+    if (this.authService.isAuthenticated() && userType=='usuario_comum') {
       return of(true);
     } else {
       return this.authService.refreshAccessToken().pipe(
         switchMap(() => {
-          if (this.authService.isAuthenticated()) {
+          if (this.authService.isAuthenticated() && userType=='usuario_comum') {
             return of(true);
           } else {
             // Redirecionar para a página de login se o usuário não estiver autenticado
