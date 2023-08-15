@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxMapLibreGLModule } from '@maplibre/ngx-maplibre-gl';
 // Importe os módulos do PrimeNG que você deseja usar
-
 import { HomeComponent } from './components/home/home.component';
 import { InstituicaoComponent } from './components/instituicao/instituicao.component';
 import { AnunciosComponent } from './components/anuncios/anuncios.component';
@@ -20,15 +19,13 @@ import { DetalheAnuncioComponent } from './components/detalhe-anuncio/detalhe-an
 import { CriacaoCampanhaComponent } from './components/criacao-campanha/criacao-campanha.component';
 import { ToastrModule } from 'ngx-toastr';
 import { AdminComponent } from './components/admin/admin.component';
+import { QuemSomosComponent } from './components/quem-somos/quem-somos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     InstituicaoComponent,
-
-    
-
     AnunciosComponent,
     LoginComponent,
     CadastroComponent,
@@ -36,7 +33,8 @@ import { AdminComponent } from './components/admin/admin.component';
     CriacaoAnuncioComponent,
     DetalheAnuncioComponent,
     CriacaoCampanhaComponent,
-    AdminComponent
+    AdminComponent,
+    QuemSomosComponent,
 
   ],
   imports: [

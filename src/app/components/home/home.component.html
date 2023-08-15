@@ -25,34 +25,42 @@
 
 
 
+<section class="cta-section section-padding " id="section_2">
+  <div class="container" >
+      <div class="row justify-content-center align-items-center">
+
+          <div class="col-lg-5 col-12 ms-auto">
+              <h2 class="mb-0" id="Slogan">Seja a diferença entre<br>  A fome e a esperança<br>
+                  CONTRIBUA!</h2>
+          </div>
+                  
+            
+
+          <div class="col-lg-5 col-12">
+          
+              <a [routerLink]="['/anuncios']" class="custom-btn btn smoothscroll">Faça uma doação</a>
+          </div>
+
+      </div>
+  </div>
+</section>
 
 
 
-<!-- Retangulo no Meio do Site-->
-<div class="doe-retangulo d-flex align-items-center justify-content-between">
-  <p class="texto-lateral">
-  Faça a Diferença e Salve Vidas
-  </p>
-  <a [routerLink]= "['/anuncios']"> <button class="btn btn-primary float-end btn-lg botaodoe">Faça uma Doação
-  </button></a>
-  
-  <div class="semicirculo d-none d-md-block"></div>
 
 
-</div>
-
-<h1 class="Instituicoes">Instituições</h1>
+<h1 class="Instituicoes" style="  font-family: 'Metropolis', sans-serif; color: #5a6f80;" id="instituicoes">Instituições</h1>
   <div class="container marketing">
         <!-- Três colunas de texto, abaixo do carousel -->
         <div class="row">
           <div class="row">
-            <div class="col-lg-3" *ngFor="let instituicao of instituicoes">
+            <div class="col-lg-4 col-md-6 col-12 mb-4 mb-lg-0" *ngFor="let instituicao of instituicoes">
               <div class="card mb-4 border-0 card-custom">
                 <img class="card-img-top rounded" src="{{ instituicao.imagem }}" alt="Generic placeholder image">
                 <div class="card-body d-flex flex-column justify-content-between position-relative text-center">
                   <div>
-                    <h2 class="card-title card-title-custom">{{ instituicao.nome }}</h2>
-                    <p class="card-text text-truncate">{{ instituicao.descricao }}</p>
+                    <h2 class="card-title card-title-custom" id="nomeInst">{{ instituicao.nome }}</h2>
+                    <p class="card-text text-truncate" id="descricaoInst">{{ instituicao.descricao }}</p>
                     <p><strong>Campanha:</strong> {{instituicao.nome_campanha}}</p>
                   </div>
                   <div class="d-flex justify-content-center">

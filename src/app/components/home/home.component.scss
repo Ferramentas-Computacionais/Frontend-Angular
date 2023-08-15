@@ -28,20 +28,27 @@
   }
 
   .custom-button {
-    background-color: #5A6F80;
+    background: linear-gradient(90deg, rgba(255,224,22,1) 0%, rgba(255,224,22,1) 35%, rgba(253,192,2,1) 100%);
     color: white;
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    font-weight: bold;
+    border-radius: 100px;;
+   
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: 'Metropolis', sans-serif;
+    padding: 15px 25px;
 
   }  
 
   .doe-retangulo {
-    background-color: #E0FBFF;
+    background-color:  rgba(255, 224, 22, 0.8);
     height: 200px; 
     width: 100%;  
     position: relative;
@@ -86,3 +93,155 @@
     border: 25px solid #597080;
     
   }
+
+
+
+  .featured-block {
+    text-align: center;
+    transition: all 0.5s ease;
+    min-height: 256px;
+    padding: 15px;
+  }
+  
+  .featured-block:hover {
+    background: var(--white-color);
+    border-radius: var(--border-radius-medium);
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
+  }
+  
+  .featured-block:hover .featured-block-image {
+    transform: scale(0.75);
+  }
+  
+  .featured-block-image {
+    display: block;
+    margin: auto;
+    transition: all 0.5s;
+  }
+  
+  .featured-block:hover .featured-block-text {
+    margin-top: 0;
+  }
+  
+  .featured-block-text {
+    color: var(--primary-color);
+    font-size: var(--h5-font-size);
+    margin-top: 20px;
+    transition: all 0.5s;
+  }
+  
+
+
+
+
+
+
+
+
+
+#Slogan{
+  box-sizing: border-box;
+  font-weight: 600;
+  letter-spacing: -2px;
+  color: #5a6f80;
+  font-size: 46px;
+  font-family: 'Metropolis', sans-serif;
+
+}
+
+  #section_2 {
+    font-family: 'Metropolis', sans-serif;
+    background-color: rgba(255, 224, 22, 0.8);
+}
+.cta-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.section-padding {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+user agent stylesheet
+section {
+    display: block;
+}
+
+.cta-section::before {
+  content: "";
+  background-color:#59b9ca;
+  border-radius: 50%;
+  position: absolute;
+  top: -100px;
+  left: -30px;
+  margin: auto;
+  width: 200px;
+  height: 200px;
+}
+
+.custom-btn {
+  background: #5a6f80;
+  border: 2px solid transparent;
+  border-radius: 100px;
+  color:#ffffff;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: normal;
+  padding: 15px 25px;
+}
+
+.custom-btn a{
+  font: white;
+  background: #5a6f80;
+  font-size: 18px; 
+  font-family: 'Metropolis', sans-serif;
+
+}
+
+.cta-section::after {
+  content: "";
+  border: 20px solid #5a6f80;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -100px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 150px;
+  height: 150px;
+}
+
+@media screen and (max-width: 991px){
+.cta-section::after {
+    bottom: -60px;
+    width: 100px;
+    height: 100px;
+}
+.cta-section::before {
+  width: 150px;
+  height: 150px;
+}
+}
+
+#nomeInst{
+  font-family: 'Metropolis', sans-serif;
+
+  color: #59b9ca;
+  font-size: 24;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+#descricaoInst{
+  font-family: 'Metropolis', sans-serif;
+
+  color: #717275;
+    font-size: 16px;
+    font-weight: 300;
+}

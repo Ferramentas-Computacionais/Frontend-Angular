@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { InstituicaoComponent } from './components/instituicao/instituicao.component';
@@ -10,7 +10,7 @@ import { CriacaoAnuncioComponent} from './components/criacao-anuncio/criacao-anu
 import {DetalheAnuncioComponent} from './components/detalhe-anuncio/detalhe-anuncio.component';
 import {CriacaoCampanhaComponent} from './components/criacao-campanha/criacao-campanha.component';
 import {AdminComponent} from './components/admin/admin.component';
-
+import { QuemSomosComponent } from './components/quem-somos/quem-somos.component';
 import { AppComponent } from './app.component';
 
 import { AuthGuard } from './auth.guard'
@@ -27,7 +27,7 @@ const routes: Routes = [
   {path: 'criacao_anuncio',component: CriacaoAnuncioComponent, canActivate: [AuthGuard]},
   {path: 'criacao_campanha',component: CriacaoCampanhaComponent, canActivate: [AuthGuard]},
   {path: 'admin',component: AdminComponent, canActivate: [UsuarioEspecialGuard]},
-
+  {path: 'quem_somos', component: QuemSomosComponent},
   {path: 'detalhe_anuncio/:id',component: DetalheAnuncioComponent},
 
 
