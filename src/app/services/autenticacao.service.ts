@@ -91,6 +91,22 @@ export class AutenticacaoService {
   
   }
 
+  criarUsuario(novoUsuario: any): Observable<any> {
+    const headers = new HttpHeaders({
+      'Authorization': 'Bearer ' + localStorage.getItem('access_token')
+    });
+
+    return this.http.post(`${this.constantsService.API_BASE_URL}/create-user`, novoUsuario, { headers }).pipe(
+      tap(response => {
+        // Lógica de sucesso, se necessário
+      }),
+      catchError(error => {
+        console.error('Erro ao criar usuário', error);
+        throw error;
+      })
+    );
+  }
+
   
   
 }

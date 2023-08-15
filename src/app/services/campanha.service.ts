@@ -14,7 +14,7 @@ export class CampanhaService {
   ) { }
 
   obter() {
-    return this.httpclient.get<campanha_interface[]>(`${this.constantsService.API_BASE_URL}/mostrar-campanha/3`);
+    return this.httpclient.get<campanha_interface[]>(`${this.constantsService.API_BASE_URL}/mostrar-campanha/5`);
   }
 
   obter_por_id(userId: number) {
@@ -27,6 +27,12 @@ export class CampanhaService {
 
     return this.httpclient.post(`${this.constantsService.API_BASE_URL}/create-campanha`, data, { headers });
   }
+  obterCampanhasNaoVerificadas() {
+    const headers = new HttpHeaders({
+      'Authorization': 'Bearer ' + localStorage.getItem('access_token')
+    });
 
-
+    return this.httpclient.get<campanha_interface[]>(`${this.constantsService.API_BASE_URL}/campanhas_admin`, { headers });
+  }
+  	
 }

@@ -1,1 +1,59 @@
-<p>admin works!</p>
+<div class="container">
+    <h1 class="text-center">Anúncios Para Validar</h1>
+  
+    <!-- Lista de anúncios não validados -->
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div *ngFor="let anuncio of anunciosNaoValidados" class="card mb-3">
+          <img [src]="anuncio.imagem" class="card-img-top" [alt]="anuncio.nome">
+          <div class="card-body">
+            <h5 class="card-title">{{ anuncio.nome }}</h5>
+            <p class="card-text">{{ anuncio.descricao }}</p>
+            <button (click)="validarAnuncio(anuncio.id)" class="btn btn-primary">Validar Anúncio</button>
+          </div>
+        </div>
+      </div>
+      <div *ngIf="anunciosNaoValidados.length === 0" class="text-center">
+        <p class="text-center">Não há mais anúncios para validar :) </p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container mt-4">
+    <h2>Campanhas Para Validar</h2>
+    <div class="row">
+      <div class="col-md-6 offset-md-3">
+        <div *ngFor="let campanha of campanhasNaoVerificadas" class="card mb-3">
+          <img [src]="campanha.imagem" class="card-img-top" [alt]="campanha.nome">
+          <div class="card-body">
+            <h5 class="card-title">{{ campanha.nome }}</h5>
+            <p class="card-text">{{ campanha.descricao }}</p>
+            <button  class="btn btn-primary">Validar Campanha</button>
+          </div>
+        </div>
+        <!-- Mostrar aviso se não houver mais campanhas para validar -->
+        <div *ngIf="campanhasNaoVerificadas.length === 0" class="text-center">
+          <p>Não há mais campanhas para validar no momento.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Seção de Criação de Usuário -->
+<div class="container mt-4">
+    <h2>Criar Novo Usuário</h2>
+    <form (ngSubmit)="registrarUsuario()">
+      <div class="form-group">
+        <label for="username">Nome de Usuário:</label>
+        <input type="text" class="form-control" id="username" [(ngModel)]="novoUsuario.username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Senha:</label>
+        <input type="password" class="form-control" id="password" [(ngModel)]="novoUsuario.password" name="password" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Criar Usuário</button>
+    </form>
+  </div>
+  
+  
