@@ -8,8 +8,11 @@
       <img src="{{ instituicoes.imagem }}" alt="imagem da instituição" id="apresenta-instituição-logo">
       
       <h2 class="col" id="dados-instituição">
-        Campanha De Arrecadação <br> 
-        Local: xxxxxxxxxx <br>
+        <div  *ngIf="minhaCampanha.length > 0">
+
+        {{minhaCampanha[0].nome}} , {{minhaCampanha[0].descricao}} <br>
+        </div> 
+        Local: (aqui vai o local do maps) <br>
         Telefone: {{ instituicoes.telefone }}<br>
         Email: {{ instituicoes.email }}
       </h2>
@@ -51,7 +54,10 @@
     <div class="col">
       <div class="d-flex">
         <!-- aqui vai uma imagem-->
-        <img src="/05 1.png">
+        <div  *ngIf="minhaCampanha.length > 0">
+          <img src="{{minhaCampanha[0].imagem}}">
+        </div>
+        
       </div>
     </div>
     
@@ -62,5 +68,23 @@
 
 
 
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3 col-md-6 col-sm-12 mb-4" *ngFor="let anuncio of anuncios">
+      <div class="card h-80">
+        <img [src]="anuncio.imagem" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h3 class="card-title">{{ anuncio.nome }}</h3>
+          <p class="card-description">Instituição: {{ anuncio.instituicao.nome }}</p>
+          <p class="card-text">{{ anuncio.descricao }}</p>
+          <div class="d-flex justify-content-center">
+            <a [routerLink]="['/detalhe_anuncio', anuncio.id]" class="btn btn-primary btn-custom">   Ver mais   </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 

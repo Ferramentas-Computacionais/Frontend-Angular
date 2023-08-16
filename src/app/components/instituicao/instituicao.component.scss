@@ -121,4 +121,123 @@
     margin-left: auto;
     margin-right: auto;
   }
+
+
+  .card-img-top {
+    height: 200px;
+    object-fit: cover;
+   
+  }
+
+  .btn-custom {
+    border-radius: 15px;
+    padding: 5px 10px;
+    font-size: 14px;
+    background-color: #FFE114;
+    color: black; 
+    outline: none;
+    border: none; 
+    font-weight: bold; 
+
+
+  }
+
+  .card-text {
+    height: 70px;
+    overflow: hidden;
+  }
+  .card-description {
+    height: 30px;
+    overflow: hidden;
+    margin-top: 5px;
+  }
+  .card-title {
+    height: 60px;
+    overflow: hidden;
+    font-weight: bold; 
+  }
+
+  .form-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #D9D9D9;
+    max-width: 690px; /* Defina a largura máxima desejada para o container */
+    margin: 1.2rem auto; /* Centraliza o container horizontalmente */
+    padding-top: 20px; /* Adiciona um espaço acima do container */
+  }
+
+  .form-item {
+    display: flex;
+    align-items: center;
+    background-color: #D9D9D9;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  .form-item label {
+    width: 220px;
+    margin-right: 10px;
+    font-weight: bold;
+    color: black;
+  }
+
+  .form-item .input-group {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 5px;
+    flex-grow: 1;
+  }
+
+  .form-item .input-group input[type="text"],
+  .form-item .input-group select,
+  .form-item .input-group input[type="search"] {
+    padding: 8px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+  }
+
+  .form-item.large-input label {
+    flex-basis: 0; /* Ajuste o tamanho horizontal do label para o campo 1 */
+  }
+
+  .form-item .input-group input[type="search"] {
+    margin-left: 0; /* Remove a margem à esquerda do botão de pesquisa */
+  }
+
+  .input-group {
+    position: relative;
+  }
+
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+
+  @media (min-width: 768px) {
+    /* Estilos para dispositivos com largura igual ou superior a 768px */
+    .form-container {
+      grid-template-columns: 2fr 1fr;
+    }
+
+    .form-item.large-input label {
+      flex-basis: 180px;
+    }
+  }
+  .pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
   

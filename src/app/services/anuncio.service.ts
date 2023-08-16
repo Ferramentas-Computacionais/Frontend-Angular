@@ -18,12 +18,12 @@ export class AnuncioService {
     return this.httpclient.get<anuncio_interface[]>(`${this.constantsService.API_BASE_URL}/listar-anuncios`);
   }
 
-  obter_por_id(userId: number) {
+  obter_por_id_admin(userId: number) {
     const headers = new HttpHeaders({
       'Authorization': 'Bearer ' + localStorage.getItem('access_token')
     });
 
-    return this.httpclient.get<anuncio_interface[]>(`${this.constantsService.API_BASE_URL}/listar-anuncios-usuario/${userId}`, { headers });
+    return this.httpclient.get<anuncio_interface[]>(`${this.constantsService.API_BASE_URL}/listar-anuncios-usuario_admin/${userId}`, { headers });
   }
   criarAnuncio(data: FormData) {
     const headers = new HttpHeaders({
@@ -32,6 +32,13 @@ export class AnuncioService {
 
     return this.httpclient.post(`${this.constantsService.API_BASE_URL}/create-anuncio`, data, { headers });
   }
+
+  obter_por_id(userId: number) {
+
+
+    return this.httpclient.get<anuncio_interface[]>(`${this.constantsService.API_BASE_URL}/listar-anuncios-usuario/${userId}`);
+  }
+
   excluirAnuncio(anuncioId: number) {
     const headers = new HttpHeaders({
       'Authorization': 'Bearer ' + localStorage.getItem('access_token')

@@ -34,5 +34,13 @@ export class CampanhaService {
 
     return this.httpclient.get<campanha_interface[]>(`${this.constantsService.API_BASE_URL}/campanhas_admin`, { headers });
   }
+
+  obter_por_id_admin(userId: number) {
+    const headers = new HttpHeaders({
+      'Authorization': 'Bearer ' + localStorage.getItem('access_token')
+    });
+
+    return this.httpclient.get<campanha_interface[]>(`${this.constantsService.API_BASE_URL}/campanhas_admin/${userId}`, { headers });
+  }
   	
 }

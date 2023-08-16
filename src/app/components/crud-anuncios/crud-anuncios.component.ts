@@ -53,7 +53,7 @@ export class CrudAnunciosComponent implements OnInit {
           console.error('Erro ao verificar a instituição:', error);
         }
       );
-      this.campanhaService.obter_por_id(usuarioId).subscribe(
+      this.campanhaService.obter_por_id_admin(usuarioId).subscribe(
         (campanha) => {
           this.minhaCampanha = campanha;
           
@@ -63,11 +63,10 @@ export class CrudAnunciosComponent implements OnInit {
           console.error('Erro ao obter campanhas:', error);
         }
       );
-        this.anuncioService.obter_por_id(usuarioId).subscribe(
+        this.anuncioService.obter_por_id_admin(usuarioId).subscribe(
           (data: anuncio_interface[]) => {
             this.anuncios = data;
             this.originalAnuncios = [...this.anuncios];
-            this.obterAnuncios();
           },
           error => {
             console.log('Ocorreu um erro ao obter os anúncios:', error);
@@ -81,7 +80,18 @@ export class CrudAnunciosComponent implements OnInit {
       this.anuncioService.excluirAnuncio(anuncio.id).subscribe(
         () => {
           this.anuncios = this.anuncios.filter(a => a.id !== anuncio.id);
-          this.obterAnuncios();
+          
+          // Após a exclusão, chame novamente o método para atualizar a lista de anúncios
+          const usuarioId = Number(localStorage.getItem('usuario_id'));
+          this.anuncioService.obter_por_id_admin(usuarioId).subscribe(
+            (data: anuncio_interface[]) => {
+              this.anuncios = data;
+              this.originalAnuncios = [...this.anuncios];
+            },
+            error => {
+              console.log('Ocorreu um erro ao obter os anúncios:', error);
+            }
+          );
         },
         (error) => {
           console.error('Erro ao excluir anúncio:', error);
@@ -90,31 +100,7 @@ export class CrudAnunciosComponent implements OnInit {
     }
   }
 
-  obterAnuncios() {
-    this.totalItems = this.anuncios.length;
-    this.anuncios = this.originalAnuncios.filter(anuncio =>
-      anuncio.nome.toLowerCase().includes(this.searchTerm.toLowerCase())
-    );
-    this.totalItems = this.anuncios.length;
-    this.anuncios = this.anuncios.slice(
-      (this.currentPage - 1) * this.pageSize,
-      this.currentPage * this.pageSize
-    );
-  }
 
-  previousPage() {
-    if (this.currentPage > 1) {
-      this.currentPage--;
-      this.obterAnuncios();
-    }
-  }
-
-  nextPage() {
-    if (this.currentPage < Math.ceil(this.totalItems / this.pageSize)) {
-      this.currentPage++;
-      this.obterAnuncios();
-    }
-  }
 
   onImagemChange(event: any) {
     this.novaInstituicao.imagemFile = event.target.files[0];
