@@ -35,13 +35,16 @@ preencherNomeCampanha() {
     this.obtercampanhaPorId(instituicao.usuario_id).subscribe(
       (response: any) => {
         if (response) {
-          instituicao.nome_campanha = response.nome;
+          instituicao.nome_campanha = response[0].nome;
+          
         } else {
           instituicao.nome_campanha = 'N/A';
         }
       },
       (error) => {
         console.error(error);
+        instituicao.nome_campanha = 'N/A';
+
       }
     );
   });

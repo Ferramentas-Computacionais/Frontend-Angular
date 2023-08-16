@@ -15,7 +15,7 @@ export class InstituicaoService {
   ) { }
 
   obter() {
-    return this.httpclient.get<instituicao_interface[]>(`${this.constantsService.API_BASE_URL}/mostrar-instituicao/2`);
+    return this.httpclient.get<instituicao_interface[]>(`${this.constantsService.API_BASE_URL}/mostrar-instituicao/10`);
   }
 
   obter_pelo_id(userId: number) {
