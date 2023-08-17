@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
 <div id="carouselExampleCaptions" class="carousel slide">
   <div class="carousel-indicators">
     <button type="button" *ngFor="let campanha of campanhas; let i = index" data-bs-target="#carouselExampleCaptions" [attr.data-bs-slide-to]="i" [class.active]="i === 0" [attr.aria-current]="i === 0 ? 'true' : 'false'" [attr.aria-label]="'Slide ' + (i + 1)"></button>
@@ -78,4 +80,76 @@
         
     </div>
         
-        
+    <section class="contact-section section-padding" id="sobrenos">
+      <div class="container">
+          <div class="row">
+    
+              <div class="col-lg-4 col-12 ms-auto mb-5 mb-lg-0">
+                  <div class="contact-info-wrap">
+                      <h2>Contate-nos</h2>
+    
+                      <div class="contact-image-wrap d-flex flex-wrap">
+                          <img src="../assets/images/logos/Ellipse 1.png" class="img-fluid avatar-image" alt="">
+    
+                          <div class="d-flex flex-column justify-content-center ms-3">
+                              <p class="mb-0" id="img_tlt">Ajudoe</p><br>
+                              
+                          </div>
+                      </div>
+    
+                      <div class="contact-info">
+                          <h5 class="mb-3">Informações para contato</h5>
+    
+                          <p class="d-flex mb-2">
+                              <i class="bi-geo-alt me-2"></i>
+                              R. Benfica, 455 - Madalena, Recife - PE, 50720-001                     
+                             </p>
+    
+                          
+    
+                          <p class="d-flex">
+                              <i class="bi-envelope me-2"></i>
+    
+                              <a href="mailto:ajudoe@upe.br">
+                                  ajudoe@poli.br
+                              </a>
+                          </p>
+    
+                          
+                      </div>
+                  </div>
+              </div>
+    
+              <div class="col-lg-5 col-12 mx-auto">
+                  <div>
+                      <p class=" text-contact">
+                          Bem-vindo à nossa página de contato, estamos felizes em ouvir de você!<br> 
+    
+                      <br>Entre em contato conosco por meio das redes sociais ao lado. <br>
+                      
+                      <br>Se você tiver alguma dúvida ou feedback nos contate!</p> </div>
+                  
+              </div>
+              
+          </div>
+      </div>
+    </section>
+    
+    <footer class="site-footer">
+    <div class="col-lg-6 col-md-5 col-12 d-flex justify-content-center align-items-center mx-auto">
+      <ul class="social-icon">
+          <li class="social-icon-item">
+              <a href="https://twitter.com/ajudoe_" class="social-icon-link bi-twitter"></a>
+          </li>
+    
+          <li class="social-icon-item">
+              <a href="https://www.facebook.com/profile.php?id=100094016611380" class="social-icon-link bi-facebook"></a>
+          </li>
+    
+          <li class="social-icon-item">
+              <a href="https://www.instagram.com/ajudoe_/" class="social-icon-link  bi-instagram"></a>
+          </li>
+      </ul>
+    </div>
+    </footer>
+           

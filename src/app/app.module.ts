@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule} from '@angular/common/http'
 import { AppComponent } from './app.component';
-
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxMapLibreGLModule } from '@maplibre/ngx-maplibre-gl';
 // Importe os módulos do PrimeNG que você deseja usar
@@ -20,7 +19,6 @@ import { CriacaoCampanhaComponent } from './components/criacao-campanha/criacao-
 import { ToastrModule } from 'ngx-toastr';
 import { AdminComponent } from './components/admin/admin.component';
 import { QuemSomosComponent } from './components/quem-somos/quem-somos.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,7 +42,8 @@ import { QuemSomosComponent } from './components/quem-somos/quem-somos.component
     HttpClientModule,
     NgxMapLibreGLModule,
     FormsModule,
-    ToastrModule.forRoot() 
+    ToastrModule.forRoot(),
+  
 
   ],
   providers: [],

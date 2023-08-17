@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+
 import { AutenticacaoService } from 'src/app/services/autenticacao.service';
 
 @Component({
@@ -6,12 +8,13 @@ import { AutenticacaoService } from 'src/app/services/autenticacao.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
+  isHomePage: boolean= false;
   title = 'AjuDoe';
   menuVariable: boolean = false;
   menu_icon_variable: boolean = false;
 
-  constructor(private authService: AutenticacaoService) {}
+  constructor(private authService: AutenticacaoService, private router: Router) {}
 
   openMenu() {
     this.menuVariable = !this.menuVariable;
@@ -23,5 +26,11 @@ export class AppComponent {
   }
   getUserType(): string | null {
     return localStorage.getItem('usuario_tipo');
+  }
+  ngOnInit(): void {
+    // Verifica se a rota atual é a página inicial
+    this.isHomePage = this.router.url === '/';
+    console.log("caiu aqui");
+    
   }
 }
