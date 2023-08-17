@@ -45,7 +45,7 @@ export class DetalheAnuncioComponent  implements  OnInit{
       (response)=>{
         this.anuncios = response;
         this.coordenadasteste1 = this.anuncios.instituicao.coordenada;
-        this.nomeInst = this.instituicoes.nome
+        this.nomeInst = this.anuncios.instituicoes.nome
         this.mostraMapa(this.coordenadasteste1,this.nomeInst );
       },
       error => {
