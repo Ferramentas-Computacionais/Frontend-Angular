@@ -99,6 +99,29 @@ export class CrudAnunciosComponent implements OnInit {
       );
     }
   }
+  excluirCampanha(campanha: campanha_interface): void {
+    if (confirm('Tem certeza de que deseja excluir esta campanha?')) {
+      this.campanhaService.excluirCampanha(campanha.id).subscribe(
+        () => {
+          this.minhaCampanha = this.minhaCampanha.filter(a => a.id !== campanha.id);
+          
+          // Após a exclusão, chame novamente o método para atualizar a lista de anúncios
+          const usuarioId = Number(localStorage.getItem('usuario_id'));
+          this.campanhaService.obter_por_id_admin(usuarioId).subscribe(
+            (data: campanha_interface[]) => {
+              this.minhaCampanha = data;
+            },
+            error => {
+              console.log('Ocorreu um erro ao obter as campanhas', error);
+            }
+          );
+        },
+        (error) => {
+          console.error('Erro ao excluir campanha', error);
+        }
+      );
+    }
+  }
 
 
 

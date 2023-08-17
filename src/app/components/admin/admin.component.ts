@@ -14,7 +14,8 @@ import { anuncio_interface } from 'src/app/interfaces/anuncio_interface';
 export class AdminComponent implements OnInit {
   anunciosNaoValidados: anuncio_interface[] = []; // Array para armazenar anúncios não validados
   campanhasNaoVerificadas: campanha_interface[] = []; // Array para armazenar campanhas não verificadas
-
+  registroConcluido = false;
+  message = '';
   novoUsuario = { // Defina o novo usuário aqui
     username: '',
     password: ''
@@ -67,6 +68,17 @@ export class AdminComponent implements OnInit {
       }
     );
   }
+  validarCampanha(campanhaId: number): void {
+    this.campanhaService.verificarCampanhaAdmin(campanhaId).subscribe(
+      () => {
+        // Atualiza a lista de anúncios não validados após a validação
+        this.carregarCampanhasNaoVerificadas();
+      },
+      (error) => {
+        console.error('Erro ao validar campanha', error);
+      }
+    );
+  }
 
   registrarUsuario(): void {
     // Implemente a lógica para criar um novo usuário
@@ -77,10 +89,15 @@ export class AdminComponent implements OnInit {
 
     this.autenticacaoService.criarUsuario(novoUsuario).subscribe(
       () => {
-        // Lógica de sucesso, se necessário
+        this.registroConcluido = true;
+        this.message = 'usuário criado com sucesso'
+        this.novoUsuario.username = '';
+        this.novoUsuario.password = '';
       },
       (error) => {
-        console.error('Erro ao criar usuário', error);
+        this.message = 'erro, usuário existente ';
+        this.registroConcluido = true;
+
       }
     );
   }

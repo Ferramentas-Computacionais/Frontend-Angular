@@ -29,7 +29,7 @@
           <div class="card-body">
             <h5 class="card-title">{{ campanha.nome }}</h5>
             <p class="card-text">{{ campanha.descricao }}</p>
-            <button  class="btn btn-primary">Validar Campanha</button>
+            <button  (click)="validarCampanha(campanha.id)" class="btn btn-primary">Validar Campanha</button>
           </div>
         </div>
         <!-- Mostrar aviso se não houver mais campanhas para validar -->
@@ -54,6 +54,9 @@
       </div>
       <button type="submit" class="btn btn-primary">Criar Usuário</button>
     </form>
+    <div *ngIf="registroConcluido" class="alert alert-success mt-3">
+      {{message}}
+    </div>
   </div>
   
   

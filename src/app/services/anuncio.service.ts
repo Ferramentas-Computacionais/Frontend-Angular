@@ -38,6 +38,11 @@ export class AnuncioService {
 
     return this.httpclient.get<anuncio_interface[]>(`${this.constantsService.API_BASE_URL}/listar-anuncios-usuario/${userId}`);
   }
+  obter_por_id_anuncio(userId: number) {
+
+
+    return this.httpclient.get<anuncio_interface[]>(`${this.constantsService.API_BASE_URL}/mostrar-anuncio/${userId}`);
+  }
 
   excluirAnuncio(anuncioId: number) {
     const headers = new HttpHeaders({

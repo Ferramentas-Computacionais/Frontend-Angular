@@ -21,7 +21,6 @@ export class InstituicaoComponent implements  OnInit{
   coordenadasteste1!: string;
   nomeInst! :string;
   //versao antiga do mapa
-   private map!: L.Map;
   
 
 
