@@ -30,7 +30,7 @@ export class AppComponent implements OnInit{
   ngOnInit(): void {
     // Verifica se a rota atual é a página inicial
     this.isHomePage = this.router.url === '/';
-    console.log("caiu aqui");
+    //console.log("caiu aqui");
     
   }
 }

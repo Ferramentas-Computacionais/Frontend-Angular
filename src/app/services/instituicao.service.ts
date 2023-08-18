@@ -32,5 +32,15 @@ export class InstituicaoService {
 
     return this.httpclient.post(`${this.constantsService.API_BASE_URL}/create-instituicao`, data, { headers });
   }
+  deletarInstituicao(userId: number) {
+    const headers = new HttpHeaders({
+      'Authorization': 'Bearer ' + localStorage.getItem('access_token')
+    });
+  
+    return this.httpclient.post(`${this.constantsService.API_BASE_URL}/excluir-user/${userId}`, {}, { headers });
+  }
+  obter_admin() {
+    return this.httpclient.get<instituicao_interface[]>(`${this.constantsService.API_BASE_URL}/mostrar-instituicao/1000`);
+  }  
 
 }

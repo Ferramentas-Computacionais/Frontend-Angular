@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { AnuncioService } from 'src/app/services/anuncio.service';
-import { AutenticacaoService } from 'src/app/services/autenticacao.service';
-import { campanha_interface } from 'src/app/interfaces/campanha_interface'; 
-import { CampanhaService } from 'src/app/services/campanha.service'; 
-
 import { anuncio_interface } from 'src/app/interfaces/anuncio_interface';
+import { AutenticacaoService } from 'src/app/services/autenticacao.service';
+import { campanha_interface } from 'src/app/interfaces/campanha_interface';
+import { CampanhaService } from 'src/app/services/campanha.service';
+import {InstituicaoService} from 'src/app/services/instituicao.service'
+import {instituicao_interface} from 'src/app/interfaces/instituicao_interface'
 
 @Component({
   selector: 'app-admin',
@@ -14,6 +15,8 @@ import { anuncio_interface } from 'src/app/interfaces/anuncio_interface';
 export class AdminComponent implements OnInit {
   anunciosNaoValidados: anuncio_interface[] = []; // Array para armazenar anúncios não validados
   campanhasNaoVerificadas: campanha_interface[] = []; // Array para armazenar campanhas não verificadas
+  instituicoes: instituicao_interface[] = [];
+
   registroConcluido = false;
   message = '';
   novoUsuario = { // Defina o novo usuário aqui
@@ -24,13 +27,27 @@ export class AdminComponent implements OnInit {
   constructor(
     private anuncioService: AnuncioService,
     private autenticacaoService: AutenticacaoService,
-    private campanhaService: CampanhaService 
+    private campanhaService: CampanhaService,
+    private InstituicaoService: InstituicaoService,
+
 
   ) { }
 
   ngOnInit(): void {
     this.carregarAnunciosNaoValidados();
     this.carregarCampanhasNaoVerificadas(); // Adicione esta linha
+
+
+    this.InstituicaoService.obter_admin().subscribe(
+      (instituicoes) => {
+        this.instituicoes = instituicoes;
+      },
+      error => {
+        console.log('Erro ao obter instituições:', error);
+        console.log('consegui chegar aqui')
+
+      }
+    );
 
   }
 
@@ -78,6 +95,20 @@ export class AdminComponent implements OnInit {
         console.error('Erro ao validar campanha', error);
       }
     );
+  }
+
+  excluirInstituicao(instituicao: instituicao_interface): void {
+    if (confirm(`Tem certeza de que deseja excluir a instituição "${instituicao.nome}"?`)) {
+      this.InstituicaoService.deletarInstituicao(instituicao.usuario_id).subscribe(
+        () => {
+          // Remova a instituição da lista após a exclusão
+          this.instituicoes = this.instituicoes.filter(inst => inst.usuario_id !== instituicao.usuario_id);
+        },
+        error => {
+          console.error('Erro ao excluir instituição:', error);
+        }
+      );
+    }
   }
 
   registrarUsuario(): void {
