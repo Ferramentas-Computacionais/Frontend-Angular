@@ -4,10 +4,10 @@
   <div class="carousel-indicators">
     <button type="button" *ngFor="let campanha of campanhas; let i = index" data-bs-target="#carouselExampleCaptions" [attr.data-bs-slide-to]="i" [class.active]="i === 0" [attr.aria-current]="i === 0 ? 'true' : 'false'" [attr.aria-label]="'Slide ' + (i + 1)"></button>
   </div>
-  <div class="carousel-inner">
+  <div class="carousel-inner" >
     <div *ngFor="let campanha of campanhas; let i = index" class="carousel-item" [class.active]="i === 0">
-      <div class="d-flex justify-content-center">
-        <img class="w-25 img-fluid" [src]="campanha.imagem" [alt]="'Slide ' + (i + 1)">
+      <div class="d-flex justify-content-center img-container">
+        <img class="w-100 img-fluid" [src]="campanha.imagem" [alt]="'Slide ' + (i + 1)">
       </div>
       <div class="carousel-caption d-none d-md-block">
         <h5>{{ campanha.nome }}</h5>

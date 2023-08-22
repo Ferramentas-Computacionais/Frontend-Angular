@@ -1,12 +1,12 @@
 <div class="container">
-  <h2 class="my-2">Login</h2>
+  <h2 class="my-5">Login</h2>
   <div></div>
   
   <form (ngSubmit)="onLogin()">
     <div class="form-floating mb-3">
       <i class="envelope fa-solid fa-envelope fa-lg"></i>
-      <input type="email" class="form-control" placeholder="Email" id="username" name="username" [(ngModel)]="authData.username" required>
-      <label for="username">Email</label>
+      <input type="text" class="form-control" placeholder="username" id="username" name="username" [(ngModel)]="authData.username" required>
+      <label for="username">usuario</label>
     </div>
     <div class="form-floating mb-3">
       <i class="lock fa-solid fa-lock fa-lg"></i>
@@ -19,5 +19,4 @@
     <div *ngIf="loginError" class="error">{{ loginError }}</div>
   </form>
 
-  <button type="button" class="btn btn-link">Esqueceu sua senha?</button>
 </div>

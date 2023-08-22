@@ -131,7 +131,20 @@
   }
   
 
-
+  .img-container {
+    max-height: 500px; /* Altura máxima desejada */
+    overflow: hidden; /* Para limitar a altura */
+  }
+  
+  .carousel-item {
+    height: 100%; /* Garante que a altura do item seja 100% da altura máxima */
+  }
+  
+  .carousel-item img {
+    width: 100%; /* Garante que a imagem preencha a largura do carrossel */
+    height: 100%; /* Faz com que a imagem preencha a altura do item */
+    object-fit: cover; /* Redimensiona a imagem para preencher o espaço */
+  }
 
 
 
