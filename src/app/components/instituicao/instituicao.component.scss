@@ -70,12 +70,26 @@
     font-size: 36px;
     margin-left: auto;
     margin-right: auto;
+    font-weight: bold; 
+    text-transform: uppercase; /* Deixa o texto em letras maiúsculas */
+
+  }
+
+  #texto-lado-logo-2 {
+    width: 80%;
+    color: #121212;
+    font-size: 25px;
+    margin-left: auto;
+    margin-right: auto;
+  
+   
+
   }
   #mapid { 
     position: relative;
     align-self: center;
     margin-top: 36px;
-    width: 80%;
+    width: 100%;
     height: 298px;
    max-width: 80%;
     min-height: 298px;
@@ -83,9 +97,9 @@
   #mapa {
     align-self: center;
     margin-top: 36px;
-    width: 80%;
-    height: 298px;
-    max-width: 80%;
+    width: 100%;
+    height: 350px;
+    max-width: 100%;
     min-height: 298px;
   }
 
@@ -240,4 +254,164 @@
     justify-content: center;
     margin-top: 20px;
   }
-  
+  /* Adicione uma regra de estilo para o tamanho de tela pequeno (máximo 768px) */
+@media (max-width: 768px) {
+  #apresenta-instituição {
+    margin-top: 20px; /* Reduza o espaço superior */
+  }
+
+  #mapid,
+  #mapa {
+    width: 80%; /* O mapa ocupará a largura total */
+    height: 200px; /* Altura reduzida para dispositivos menores */
+    margin-top: 20px; /* Reduza o espaço superior */
+  }
+
+  #dados-instituição {
+    font-size: 24px; /* Reduza o tamanho da fonte */
+    text-align: center; /* Centralize o texto */
+    width: 100%;
+    margin-top: 20px; /* Reduza o espaço superior */
+  }
+
+  #btn-nossos-projetos {
+    font-size: 24px; /* Reduza o tamanho da fonte */
+    height: auto; /* Ajuste a altura automaticamente */
+    margin-top: 20px; /* Reduza o espaço superior */
+  }
+
+  #texto-lado-logo {
+    font-size: 24px; /* Reduza o tamanho da fonte */
+    margin-top: 20px; /* Reduza o espaço superior */
+  }
+
+  .form-container {
+    max-width: 100%; /* O container ocupará a largura total */
+  }
+}
+
+
+/* Adicione uma regra de estilo para o tamanho de tela pequeno (máximo 768px) */
+@media (max-width: 768px) {
+  /* ... (outras regras de estilo) ... */
+
+  .row.d-flex {
+    flex-direction: column; /* Altere a direção da flexbox para uma coluna */
+    align-items: center; /* Centralize horizontalmente */
+  }
+
+  .col-md-5 {
+    display: flex; /* Use flexbox para alinhar a imagem e o texto */
+    flex-direction: column; /* Empilhe a imagem e o texto verticalmente */
+    align-items: center; /* Centralize horizontalmente */
+    text-align: center; /* Centralize o texto */
+
+    #apresenta-instituição-logo {
+      width: 218px;
+      height: 233px;
+      margin: 20px 0; /* Adicione margens verticais */
+      
+    }
+  }
+
+  /* ... (outras regras de estilo) ... */
+}
+
+/* Adicione uma regra de estilo para o tamanho de tela pequeno (máximo 768px) */
+@media (max-width: 768px) {
+  /* ... (outras regras de estilo) ... */
+
+  .row.d-flex {
+    flex-direction: column; /* Altere a direção da flexbox para uma coluna */
+    align-items: center; /* Centralize horizontalmente */
+  }
+
+  .col-md-5 {
+    display: flex; /* Use flexbox para alinhar a imagem e o texto */
+    flex-direction: column; /* Empilhe a imagem e o texto verticalmente */
+    align-items: center; /* Centralize horizontalmente */
+    text-align: center; /* Centralize o texto */
+
+    #apresenta-instituição-logo {
+      width: 218px;
+      height: 233px;
+      margin: 20px 0; /* Adicione margens verticais */
+    }
+  }
+
+  /* ... (outras regras de estilo) ... */
+
+  #dados-instituição,
+  #mapid {
+    width: 100%; /* O mapa ocupará a largura total */
+    margin: 20px 0; /* Adicionar margens verticais */
+  }
+
+  .row.justify-content-center {
+    display: grid; /* Usar um grid */
+    grid-template-columns: repeat(2, 1fr); /* Grid 2x2 */
+    gap: 20px; /* Espaço entre os elementos do grid */
+    text-align: center; /* Centralizar o texto no grid */
+  }
+}
+#mapid,
+#mapa {
+  width: 100%; /* O mapa ocupará a largura total */
+  /* ... outros estilos ... */
+}
+/* ... (seu CSS atual) ... */
+
+.img-campanha {
+  max-width: 550px;
+  max-height: 600px;
+  width: auto;
+  height: auto;
+  border-radius: 50%; /* Torna a imagem redonda */
+}
+
+/* ... (seu CSS atual) ... */
+
+
+.featurette-heading{
+  margin-left:40px;
+  text-transform: uppercase; /* Deixa o texto em letras maiúsculas */
+  font-weight: bold; /* Torna o texto mais grosso */
+
+}
+
+.lead{
+  margin-left:50px;
+
+}
+
+
+/* ... (seu CSS atual) ... */
+
+@media (max-width: 768px) {
+  /* Alinhar texto e imagem verticalmente em dispositivos menores */
+  .row.d-flex {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .col-md-5 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Ajustar a imagem responsiva */
+  .img-campanha {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Ocultar o mapa em dispositivos menores */
+  #mapid,
+  #mapa {
+    display: none;
+  }
+}
+
+/* ... (seu CSS atual) ... */

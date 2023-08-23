@@ -2,17 +2,13 @@
 <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 <div id="mt-5"></div>
 
-<div class="container-fluid" id="apresenta-instituição" *ngIf="instituicoes" >
+<div class="container" id="apresenta-instituição" *ngIf="instituicoes" >
   <div class="row d-flex">
     <div class="col-md-5">
-      <img src="{{ instituicoes.imagem }}" alt="imagem da instituição" id="apresenta-instituição-logo">
+      <img src="{{ instituicoes.imagem }}" alt="imagem da instituição" id="dados-instituição">
       
       <h2 class="col" id="dados-instituição">
-        <div  *ngIf="minhaCampanha.length > 0">
-
-        {{minhaCampanha[0].nome}} , {{minhaCampanha[0].descricao}} <br>
-        </div> 
-        Local: (aqui vai o local do maps) <br>
+      
         Telefone: {{ instituicoes.telefone }}<br>
         Email: {{ instituicoes.email }}
       </h2>
@@ -22,30 +18,31 @@
     
     <div class="col-md-7">
       <div class="col d-flex">
-        <h2 id="texto-lado-logo">
-          {{ instituicoes.descricao }}
-        </h2>
+        <h1 id="texto-lado-logo">
+          {{ instituicoes.nome }}
+        </h1>
       </div>
-        <div id="mapa">
-          
-          <div id="mapid"></div>
-        </div>
-       
+
+      <div class="col d-flex">
+        <div class="d-flex" id="texto-lado-logo-2">{{ instituicoes.descricao }}</div>
+      </div>
    
     </div>
   </div>
-  
+
+
+  <div class=""></div>
   <div class="row justify-content-center">
+    
     <div class="col"></div>
     <div class="col"></div>
     
-    <div class="col">
-      <div class="d-flex" id="nome-instituição">{{ instituicoes.nome }}</div>
-    </div>
+
     
     <div class="col"></div>
     <div class="col"></div>
   </div> 
+  
   
   <div class="row justify-content-center">
     <div class="col"></div>
@@ -54,24 +51,45 @@
     <div class="col">
       <div class="d-flex">
         <!-- aqui vai uma imagem-->
-        <div  *ngIf="minhaCampanha.length > 0">
-          <img src="{{minhaCampanha[0].imagem}}">
-        </div>
+
         
       </div>
     </div>
-    
+    <div class="justify-content-center" id="mapa">
+          
+      <div id="mapid"></div>
+    </div>
     <div class="col"></div>
     <div class="col"></div>
   </div>
- 
 
 
+  <hr class="featurette-divider">
+
+  <div  *ngIf="minhaCampanha.length > 0">
+    <h1 class="text-center mb-5">Campanha Da Instituição</h1>
+    <div class="row featurette">
+      <div class="col-md-7 order-md-2">
+        <h2 class="featurette-heading">{{minhaCampanha[0].nome}} </h2>
+        <p class="lead">{{minhaCampanha[0].descricao}}</p>
+      </div>
+      <div class="col-md-5 order-md-1">
+        <img class="featurette-image img-fluid mx-auto img-campanha" src="{{minhaCampanha[0].imagem}}" alt="Generic placeholder image">
+      </div>
+    </div>
+  </div>
 
 </div>
 
-<div class="container">
+
+  
+
+
+
+<div class="container mt-3">
   <div class="row">
+    <h1 *ngIf="anuncios.length > 0" class="text-center mb-5">Anúncios Da Instituição</h1>
+
     <div class="col-lg-3 col-md-6 col-sm-12 mb-4" *ngFor="let anuncio of anuncios">
       <div class="card h-80">
         <img [src]="anuncio.imagem" class="card-img-top" alt="...">
