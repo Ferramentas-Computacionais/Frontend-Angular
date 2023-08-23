@@ -164,7 +164,8 @@
 
   #section_2 {
     font-family: 'Metropolis', sans-serif;
-    background-color: rgba(255, 224, 22, 0.8);
+    background-image: linear-gradient(to bottom, rgba(255, 224, 22, 0.8), white);
+
 }
 .cta-section {
     position: relative;
@@ -263,7 +264,7 @@ section {
 
 //aqui começa o contate-nos aka footer
 #sobrenos {
-  background-color: #f5e74c;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.5), #f5e74c);
 }
 
 .contact-section {
@@ -327,6 +328,12 @@ h2 {
 h5 {
   color: #59b9ca;
   font: size 24px;;
+  font-size: 30px;
+  text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.5),
+               1px -1px 0 rgba(255, 255, 255, 0.5),
+               -1px 1px 0 rgba(255, 255, 255, 0.5),
+               1px 1px 0 rgba(255, 255, 255, 0.5);
+
   font-weight: 600;
     letter-spacing: -1px;
 }
@@ -342,12 +349,15 @@ h5 {
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     color: #717275;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 300;
     font-family: 'Metropolis', sans-serif;
     margin-top: 0;
     margin-bottom: 1rem;
-
+    text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.5),
+    1px -1px 0 rgba(255, 255, 255, 0.5),
+    -1px 1px 0 rgba(255, 255, 255, 0.5),
+    1px 1px 0 rgba(255, 255, 255, 0.5);
 }
 
 .text-contact {
