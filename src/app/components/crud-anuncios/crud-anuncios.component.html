@@ -102,35 +102,39 @@
                   </div>
                   <div class="form-group">
                     <label for="telefone">Telefone</label>
-                    <input type="text" class="form-control" id="telefone" [(ngModel)]="novaInstituicao.telefone" name="telefone" required>
+                    <input type="tel" class="form-control" id="telefone" [(ngModel)]="novaInstituicao.telefone" name="telefone"  (input)="limitarApenasNumeros($event)" pattern="[0-9]*" maxlength="13" required>
                   </div>
                   <div class="form-group">
                     <label for="cnpj">CNPJ</label>
-                    <input type="text" class="form-control" id="cnpj" [(ngModel)]="novaInstituicao.cnpj" name="cnpj" required>
+                    <input type="value" class="form-control" (input)="limitarApenasNumeros($event)" id="cnpj" [(ngModel)]="novaInstituicao.cnpj" name="cnpj" maxlength="14"  required>
                   </div>
                   <div class="form-group">
                     <label for="descricao">Descrição</label>
                     <textarea class="form-control" id="descricao" [(ngModel)]="novaInstituicao.descricao" name="descricao" required></textarea>
                   </div>
-                  <div class="form-group">
-                    <label for="coordenadas">Endereço</label>
-                    <input type="text" class="form-control" id="coordenadas" [(ngModel)]="novaInstituicao.coordenadas" name="coordenadas" required>
-                   
-                  </div>
-                  <div class="form-group">
+
+                  <div class="form-group my-2">
                     <label for="imagem">Imagem</label>
-                    <input type="file" class="form-control-file" id="imagem" accept="image/*" (change)="onImagemChange($event)" required>
+                    <input type="file" class="form-control-file form-control form-control" id="imagem" accept="image/*" (change)="onImagemChange($event)" required>
                   </div>
-          
-                  <button type="submit" class="btn btn-primary">Registrar</button>
-                </form>
+                  <div class="container">
+                    <!-- ... Outras partes do seu formulário ... -->
+                    
+                    <!-- Elemento do mapa fora do formulário -->
+                    <div id="map"></div>
+                  </div>
+
+
+
+                  <div class="d-flex mt-5 justify-content-center">
+                    <button type="submit" class="btn btn-xl btn-primary">REGISTRAR A INSTITUIÇÃO</button>
+                  </div>                </form>
 
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div id="map" ></div>
 
       <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 

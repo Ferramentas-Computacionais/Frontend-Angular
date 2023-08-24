@@ -119,7 +119,28 @@
   //Aqui começa o mapa
   #map{
 
-    width:100% ;
-    height:500px ;
+    width:auto ;
+    height:250px ;
+  }
+
+  .btn-xl {
+    font-size: 24px;
+    padding: 10px 20px;
   }
   
+  .map-control-button {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  /* Estilos para a div de resposta */
+  .campo-2 {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 1px;
+    font-size: 24px;
+  }

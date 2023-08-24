@@ -32,7 +32,8 @@ export class CrudAnunciosComponent implements OnInit {
   pageSize: number = 10;
   totalItems: number = 0;
   searchTerm: string = '';
-  
+  coordenadas: string = '';
+
   constructor(
     private anuncioService: AnuncioService,
     private campanhaService: CampanhaService,
@@ -40,7 +41,10 @@ export class CrudAnunciosComponent implements OnInit {
     private InstituicaoService: InstituicaoService,
     private router: Router
   ) {}
-
+  ngAfterViewInit(): void {
+    // Chama o método initMap após a renderização das visualizações
+    this.initMap(teste);
+  }
   ngOnInit(): void {
   var  coord =  this.initMap(teste);
   console.log(coord,"oithcua");
@@ -157,7 +161,7 @@ export class CrudAnunciosComponent implements OnInit {
     formData.append('telefone', this.novaInstituicao.telefone);
     formData.append('cnpj', this.novaInstituicao.cnpj);
     formData.append('descricao', this.novaInstituicao.descricao);
-    formData.append('coordenadas', this.novaInstituicao.coordenadas);
+    formData.append('coordenadas', this.coordenadas);
     formData.append('imagem', this.novaInstituicao.imagemFile);
 
 
@@ -178,30 +182,31 @@ export class CrudAnunciosComponent implements OnInit {
     //Aqui começa o mapa
     //******************
     initMap(teste:string) {
-      console.log("ate aqui 1");
       map = new google.maps.Map(document.getElementById('map') as HTMLElement, {
         zoom: 8,
         center: { lat: -8.058652899035927,  lng:  -8.058652899035927},
         mapTypeControl: false,
       });
-      console.log("ate aqui 2");
       geocoder = new google.maps.Geocoder();
       const inputText = document.createElement("input");
-    
+      // Aplica a classe de estilo
+
       inputText.type = "text";
       inputText.placeholder = "Digite o Endereço";
-    
+      inputText.classList.add("campo-busca-mapa","campo-2");
       const submitButton = document.createElement("input");
-    
+      
       submitButton.type = "button";
       submitButton.value = "Buscar";
-      submitButton.classList.add("button", "button-primary");
-    
+      submitButton.classList.add("btn", "btn-primary");
+      submitButton.classList.add("map-control-button"); // Aplica a classe de estilo
+
       const clearButton = document.createElement("input");
-    
+      clearButton.classList.add("map-control-button"); // Aplica a classe de estilo
+
       clearButton.type = "button";
       clearButton.value = "Limpar";
-      clearButton.classList.add("button", "button-secondary");
+      clearButton.classList.add("btn", "btn-danger");
     
       //mostra os dados na tela
        response = document.createElement("pre");
@@ -212,12 +217,7 @@ export class CrudAnunciosComponent implements OnInit {
       responseDiv.id = "response-container";
       responseDiv.appendChild(response);
     
-      const instructionsElement = document.createElement("h4");
-    
-      instructionsElement.id = "instructions";
-    
-      instructionsElement.innerHTML =
-        "<strong>Instructions</strong>:Digite um endereço ou Clique no mapa para inserir a Localização da Sua instituição";
+
         //gambiarra
         const inicia = document.createElement("input")
         inicia.type = "button";
@@ -228,9 +228,7 @@ export class CrudAnunciosComponent implements OnInit {
       map.controls[google.maps.ControlPosition.TOP_LEFT].push(inputText);
       map.controls[google.maps.ControlPosition.TOP_LEFT].push(submitButton);
       map.controls[google.maps.ControlPosition.TOP_LEFT].push(clearButton);
-      map.controls[google.maps.ControlPosition.LEFT_TOP].push(instructionsElement);
       map.controls[google.maps.ControlPosition.LEFT_TOP].push(responseDiv);
-      map.controls[google.maps.ControlPosition.TOP_LEFT].push(inicia);
 
       marker = new google.maps.Marker({
         map,
@@ -240,7 +238,7 @@ export class CrudAnunciosComponent implements OnInit {
 
       var ab = inicia.addEventListener("click",(a:any) => {
         var a:any  = this.geocode({ address: teste})
-        console.log(a,"se funcionar eu choro");
+        //console.log(a,"se funcionar eu choro");
         
       });
       
@@ -306,7 +304,17 @@ export class CrudAnunciosComponent implements OnInit {
           //aqui ele recebe as coordenadas
           map.setCenter(results[0].geometry.location);
           console.log(results[0].geometry.location);
+          const firstResult = result.results[0];
+
+          // Extraindo as coordenadas (latitude e longitude) do primeiro resultado
+          const location = firstResult.geometry.location;
+          const latitude = location.lat();
+          const longitude = location.lng();
           
+          this.coordenadas = `${latitude},${longitude}`;
+              
+          //aqui ele retorna o endereço
+          console.log(results[0].formatted_address,"resultados");
           marker.setPosition(results[0].geometry.location);
           marker.setMap(map);
           responseDiv.style.display = "block";
@@ -327,5 +335,10 @@ export class CrudAnunciosComponent implements OnInit {
         });
   
   
+      }
+      limitarApenasNumeros(event: any) {
+        const input = event.target;
+        const value = input.value.replace(/\D/g, ''); // Remove caracteres não numéricos
+        input.value = value;
       }
     }
