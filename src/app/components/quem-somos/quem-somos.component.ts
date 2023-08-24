@@ -120,9 +120,16 @@ export class QuemSomosComponent {
         marker.setMap(map);
         responseDiv.style.display = "block";
         //response.innerText = JSON.stringify(result, null, 2);
+        console.log(result)
+        const firstResult = result.results[0];
+
+        // Extraindo as coordenadas (latitude e longitude) do primeiro resultado
+        const location = firstResult.geometry.location;
+        const latitude = location.lat();
+        const longitude = location.lng();
         
-
-
+        console.log(`${latitude},${longitude}`);
+            
         //aqui ele retorna o endereço
         console.log(results[0].formatted_address,"resultados");
        
