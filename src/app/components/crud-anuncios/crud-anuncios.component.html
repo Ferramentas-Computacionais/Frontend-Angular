@@ -71,8 +71,59 @@
                   <div class="d-flex justify-content-center">
                     <button class="btn btn-danger">Excluir</button>
                   </div>
+<<<<<<< Updated upstream
                 </div>
+=======
+                  <div class="form-group">
+                    <label for="telefone">Telefone</label>
+                    <input type="text" class="form-control" id="telefone" [(ngModel)]="novaInstituicao.telefone" name="telefone" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="cnpj">CNPJ</label>
+                    <input type="text" class="form-control" id="cnpj" [(ngModel)]="novaInstituicao.cnpj" name="cnpj" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="descricao">Descrição</label>
+                    <textarea class="form-control" id="descricao" [(ngModel)]="novaInstituicao.descricao" name="descricao" required></textarea>
+                  </div>
+                  
+                </form>
+
+>>>>>>> Stashed changes
               </div>
             </div>
           </div>
         </div>
+<<<<<<< Updated upstream
+=======
+      </div>
+      <div class="container">
+      <div class="row mt-4">
+        <div class="col-lg-12">
+          <div class="card">
+        <div class="card-body">
+      <div class="form-group">
+        <label for="coordenadas">Endereço</label>
+        <input type="text" class="form-control" id="coordenadas" [(ngModel)]="novaInstituicao.coordenadas" name="coordenadas" required>
+        
+          <div id="map"></div>
+        
+      </div>
+      <div class="form-group">
+        <label for="imagem">Imagem</label>
+        <input type="file" class="form-control-file" id="imagem" accept="image/*" (change)="onImagemChange($event)" required>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Registrar</button>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAU0QHkeuGxURowacTCBbaPNpIEgLvY2o&callback=initMap&v=weekly"
+  defer
+></script>
+>>>>>>> Stashed changes
