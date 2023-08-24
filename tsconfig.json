@@ -13,7 +13,10 @@
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
     "allowSyntheticDefaultImports": true,
-
+    "typeRoots": [
+      "node_modules/@types",
+    ],
+    "skipLibCheck": true,
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,

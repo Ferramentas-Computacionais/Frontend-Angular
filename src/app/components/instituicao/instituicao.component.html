@@ -33,7 +33,12 @@
       <div class="col d-flex">
         <div class="mt-5 justify-content-center" id="mapa">
           
-          <div id="mapid"></div>
+          <google-map id="mapid"
+          width= "80%",
+          height=" 298px ",
+          [center]="center"
+          [options]="options"
+          ></google-map>
         </div>
       </div>
     </div>

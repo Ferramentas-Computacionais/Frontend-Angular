@@ -7,9 +7,9 @@ import { LoginComponent } from './components/login/login.component';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
 import { CrudAnunciosComponent } from './components/crud-anuncios/crud-anuncios.component';
 import { CriacaoAnuncioComponent} from './components/criacao-anuncio/criacao-anuncio.component';
-import {DetalheAnuncioComponent} from './components/detalhe-anuncio/detalhe-anuncio.component';
-import {CriacaoCampanhaComponent} from './components/criacao-campanha/criacao-campanha.component';
-import {AdminComponent} from './components/admin/admin.component';
+import { DetalheAnuncioComponent} from './components/detalhe-anuncio/detalhe-anuncio.component';
+import { CriacaoCampanhaComponent} from './components/criacao-campanha/criacao-campanha.component';
+import { AdminComponent} from './components/admin/admin.component';
 import { QuemSomosComponent } from './components/quem-somos/quem-somos.component';
 import { AppComponent } from './app.component';
 

@@ -19,6 +19,8 @@ import { CriacaoCampanhaComponent } from './components/criacao-campanha/criacao-
 import { ToastrModule } from 'ngx-toastr';
 import { AdminComponent } from './components/admin/admin.component';
 import { QuemSomosComponent } from './components/quem-somos/quem-somos.component';
+import { GoogleMapsModule } from '@angular/google-maps'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,6 +45,7 @@ import { QuemSomosComponent } from './components/quem-somos/quem-somos.component
     NgxMapLibreGLModule,
     FormsModule,
     ToastrModule.forRoot(),
+    GoogleMapsModule,
   
 
   ],
