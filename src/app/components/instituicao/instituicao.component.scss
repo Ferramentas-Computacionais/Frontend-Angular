@@ -358,6 +358,8 @@
 #mapa {
   width: 100%; /* O mapa ocupará a largura total */
   /* ... outros estilos ... */
+  width: 100%;
+  height: auto;
 }
 /* ... (seu CSS atual) ... */
 
@@ -408,10 +410,17 @@
   }
 
   /* Ocultar o mapa em dispositivos menores */
-  #mapid,
-  #mapa {
-    display: none;
-  }
+
 }
 
 /* ... (seu CSS atual) ... */
+
+#mapid,
+#mapa {
+  width: 100%; /* O mapa ocupará a largura total */
+  margin-left: 50%;
+  
+  transform: translateX(-50%);  margin-top: -10px;
+  width: 100%;
+  height: auto;
+}
