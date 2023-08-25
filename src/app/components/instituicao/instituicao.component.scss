@@ -432,3 +432,91 @@
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Exemplo de sombra */
 
 }
+#mapid{
+  width: 500px;
+}
+
+
+/* ... (seu CSS atual) ... */
+
+#dados-instituição {
+  font-family: 'Metropolis', sans-serif;
+  justify-content: flex-start;
+  color: #000;
+  text-align: left;
+  font-size: 36px;
+  font-weight: 600;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* Adicione estilos para tornar o texto responsivo */
+  font-size: 24px; /* Reduza o tamanho da fonte para dispositivos menores */
+  padding: 10px; /* Adicione um espaçamento interno para melhor legibilidade */
+}
+
+#texto-lado-logo {
+  margin-left: auto;
+  margin-right: auto;
+
+  /* Adicione estilos para tornar o texto responsivo */
+  font-size: 32px; /* Reduza o tamanho da fonte para dispositivos menores */
+}
+
+/* ... (outros estilos) ... */
+
+/* Adicione regras de estilo para dispositivos menores */
+@media (max-width: 768px) {
+  #dados-instituição {
+    font-size: 20px; /* Reduza ainda mais o tamanho da fonte */
+  }
+
+  #texto-lado-logo {
+    font-size: 24px; /* Reduza ainda mais o tamanho da fonte */
+  }
+
+  /* ... (outros estilos para dispositivos menores) ... */
+}
+
+/* ... (seu CSS atual) ... */
+
+#dados-instituição {
+  font-family: 'Metropolis', sans-serif;
+  justify-content: flex-start;
+  color: #000;
+  text-align: left;
+  font-size: 36px;
+  font-weight: 600;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+
+  /* Adicione estilos para tornar o texto responsivo */
+  font-size: 2rem; /* Defina o tamanho da fonte baseado em rem */
+  padding: 10px; /* Adicione um espaçamento interno para melhor legibilidade */
+}
+
+#texto-lado-logo {
+  margin-left: auto;
+  margin-right: auto;
+
+  /* Adicione estilos para tornar o texto responsivo */
+  font-size: 1.5rem; /* Defina o tamanho da fonte baseado em rem */
+}
+
+/* ... (outros estilos) ... */
+
+/* Adicione regras de estilo para dispositivos menores */
+@media (max-width: 768px) {
+  #dados-instituição {
+    font-size: 1.5rem; /* Reduza o tamanho da fonte para dispositivos menores */
+  }
+
+  #texto-lado-logo {
+    font-size: 1.25rem; /* Reduza o tamanho da fonte para dispositivos menores */
+  }
+
+  /* ... (outros estilos para dispositivos menores) ... */
+}
+
+/* ... (outros estilos) ... */

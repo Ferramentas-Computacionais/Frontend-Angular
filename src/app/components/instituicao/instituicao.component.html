@@ -1,8 +1,8 @@
 
-<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
 <div id="mt-5"></div>
 
-<div class="container" id="apresenta-instituição" *ngIf="instituicoes" >
+<div class="container" id="apresenta-instituição"  >
   <div class="row d-flex">
     <div class="col-md-5">
       <img src="{{ instituicoes.imagem }}" class="logo"alt="imagem da instituição" id="dados-instituição">
@@ -25,13 +25,17 @@
 
       <div class="col d-flex">
         <div class="d-flex" id="texto-lado-logo-2">{{ instituicoes.descricao }}</div>
+        
       </div>
 
      
     </div>
-    <div class="col-md-12 text-center">
+    <div class="col-md-12 my-4 text-center">
       <div class="col d-flex">
-
+        
+        <div id="mapid"></div>
+        
+      
       </div>
     </div>
   </div>
@@ -62,14 +66,12 @@
         
       </div>
     </div>
-
+    
     <div class="col"></div>
     <div class="col"></div>
   </div>
 
-
   <hr class="featurette-divider">
-
   <div  *ngIf="minhaCampanha.length > 0">
     <h1 class="text-center mb-5">Campanha Da Instituição</h1>
     <div class="row featurette">
@@ -110,3 +112,9 @@
   </div>
 </div>
 
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAU0QHkeuGxURowacTCBbaPNpIEgLvY2o&callback=initMap&v=weekly"
+  defer
+></script>
