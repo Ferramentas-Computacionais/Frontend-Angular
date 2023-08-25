@@ -44,12 +44,11 @@ export class CrudAnunciosComponent implements OnInit {
   ngAfterViewInit(): void {
     // Chama o método initMap após a renderização das visualizações
     this.initMap(teste);
+
+    
   }
   ngOnInit(): void {
-  var  coord =  this.initMap(teste);
-  console.log(coord,"oithcua");
-  
-    console.log("carregou ");
+
     const usuarioId = Number(localStorage.getItem('usuario_id'));
 
     if (usuarioId) {
