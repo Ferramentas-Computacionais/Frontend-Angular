@@ -413,3 +413,9 @@ h5 {
   background:#59B9CA;
   color: white;
 }
+
+.text-truncate {
+  white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+  overflow: hidden; /* Oculta o conteúdo que não cabe na linha */
+  text-overflow: ellipsis; /* Exibe reticências (...) quando o texto é cortado */
+}

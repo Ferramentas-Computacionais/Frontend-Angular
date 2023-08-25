@@ -520,3 +520,15 @@
 }
 
 /* ... (outros estilos) ... */
+
+
+
+
+
+/* Adicione regras de estilo para dispositivos menores */
+@media (max-width: 768px) {
+  #dados-instituição {
+    font-size: 1.2rem; /* Reduza o tamanho da fonte */
+    padding: 5px; /* Reduza o espaçamento interno */
+  }
+}
