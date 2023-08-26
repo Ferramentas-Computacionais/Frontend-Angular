@@ -10,7 +10,7 @@
       <h2 class="col-md-12 col-lg-6" id="dados-instituição">
       
         Telefone: {{ instituicoes.telefone }}<br>
-        Email: {{ instituicoes.email }}
+        E-mail: {{ instituicoes.email }}
       </h2>
       
 
@@ -18,13 +18,13 @@
     
     <div class="col-md-7">
       <div class="col d-flex">
-        <h1 id="texto-lado-logo">
+        <h1  id="texto-lado-logo">
           {{ instituicoes.nome }}
         </h1>
       </div>
 
       <div class="col d-flex">
-        <div class="d-flex" id="texto-lado-logo-2">{{ instituicoes.descricao }}</div>
+        <div class="d-flex lead" id="texto-lado-logo-2"><p>{{ instituicoes.descricao }}</p></div>
         
       </div>
 
@@ -72,18 +72,20 @@
   </div>
 
   <hr class="featurette-divider">
-  <div  *ngIf="minhaCampanha.length > 0">
+  <div *ngIf="minhaCampanha.length > 0" class="campanha-section">
     <h1 class="text-center mb-5">Campanha Da Instituição</h1>
-    <div class="row featurette">
-      <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading">{{minhaCampanha[0].nome}} </h2>
-        <p class="lead">{{minhaCampanha[0].descricao}}</p>
+    <div class="row featurette d-flex flex-md-row flex-column">
+      <div class="col-md-6 col-sm-12 order-md-2 flex-md-column">
+        <h2 class="featurette-heading">{{minhaCampanha[0].nome}}</h2>
+        <p class="lead" id="descricaoCampanha">{{minhaCampanha[0].descricao}}</p>
       </div>
-      <div class="col-md-5 order-md-1">
+      <div class="col-md-6 col-sm-12 order-md-1 d-flex align-items-center justify-content-center">
         <img class="featurette-image img-fluid mx-auto img-campanha" src="{{minhaCampanha[0].imagem}}" alt="Generic placeholder image">
       </div>
     </div>
   </div>
+  
+  
 
 </div>
 
@@ -98,7 +100,7 @@
 
     <div class="col-lg-3 col-md-6 col-sm-12 mb-4" *ngFor="let anuncio of anuncios">
       <div class="card h-80">
-        <img [src]="anuncio.imagem" class="card-img-top" alt="...">
+        <img [src]="anuncio.imagem" class="card-img-top " alt="...">
         <div class="card-body">
           <h3 class="card-title">{{ anuncio.nome }}</h3>
           <p class="card-description">Instituição: {{ anuncio.instituicao.nome }}</p>

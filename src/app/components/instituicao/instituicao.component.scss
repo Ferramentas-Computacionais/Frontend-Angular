@@ -65,9 +65,7 @@
   
   #texto-lado-logo {
     justify-content: flex-start;
-    width: 80%;
     color: #121212;
-    font-size: 46px;
     margin-left: auto;
     margin-right: auto;
     font-weight: bold; 
@@ -78,7 +76,6 @@
   #texto-lado-logo-2 {
     width: 80%;
     color: #121212;
-    font-size: 25px;
     margin-left: auto;
     margin-right: auto;
   
@@ -119,8 +116,7 @@
     justify-content: flex-start;
     color: #000;
     text-align: left;
-    font-size: 36px;
-    font-weight: 600;
+    
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -270,7 +266,6 @@
   }
 
   #dados-instituição {
-    font-size: 24px; /* Reduza o tamanho da fonte */
     text-align: center; /* Centralize o texto */
     width: 100%;
     margin-top: 20px; /* Reduza o espaço superior */
@@ -284,7 +279,6 @@
   }
 
   #texto-lado-logo {
-    font-size: 24px; /* Reduza o tamanho da fonte */
     margin-top: 20px; /* Reduza o espaço superior */
   }
 
@@ -444,8 +438,6 @@
   justify-content: flex-start;
   color: #000;
   text-align: left;
-  font-size: 36px;
-  font-weight: 600;
   width: 80%;
   margin-left: auto;
   margin-right: auto;
@@ -460,21 +452,15 @@
   margin-right: auto;
 
   /* Adicione estilos para tornar o texto responsivo */
-  font-size: 32px; /* Reduza o tamanho da fonte para dispositivos menores */
+   /* Reduza o tamanho da fonte para dispositivos menores */
 }
 
 /* ... (outros estilos) ... */
 
 /* Adicione regras de estilo para dispositivos menores */
 @media (max-width: 768px) {
-  #dados-instituição {
-    font-size: 20px; /* Reduza ainda mais o tamanho da fonte */
-  }
-
-  #texto-lado-logo {
-    font-size: 24px; /* Reduza ainda mais o tamanho da fonte */
-  }
-
+ 
+  
   /* ... (outros estilos para dispositivos menores) ... */
 }
 
@@ -485,8 +471,6 @@
   justify-content: flex-start;
   color: #000;
   text-align: left;
-  font-size: 36px;
-  font-weight: 600;
   width: 80%;
   margin-left: auto;
   margin-right: auto;
@@ -501,7 +485,7 @@
   margin-right: auto;
 
   /* Adicione estilos para tornar o texto responsivo */
-  font-size: 1.5rem; /* Defina o tamanho da fonte baseado em rem */
+  /* Defina o tamanho da fonte baseado em rem */
 }
 
 /* ... (outros estilos) ... */
@@ -512,9 +496,7 @@
     font-size: 1.5rem; /* Reduza o tamanho da fonte para dispositivos menores */
   }
 
-  #texto-lado-logo {
-    font-size: 1.25rem; /* Reduza o tamanho da fonte para dispositivos menores */
-  }
+  
 
   /* ... (outros estilos para dispositivos menores) ... */
 }
@@ -525,10 +507,19 @@
 
 
 
-/* Adicione regras de estilo para dispositivos menores */
-@media (max-width: 768px) {
-  #dados-instituição {
-    font-size: 1.2rem; /* Reduza o tamanho da fonte */
-    padding: 5px; /* Reduza o espaçamento interno */
+@media (max-width: 987px) {
+  .campanha-section .row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .campanha-section .col-md-6 {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .campanha-section .col-md-6.order-md-2 {
+    order: 1;
   }
 }
