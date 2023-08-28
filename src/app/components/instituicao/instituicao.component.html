@@ -10,7 +10,7 @@
       <h2 class="col-md-12 col-lg-6" id="dados-instituição">
       
         Telefone: {{ instituicoes.telefone }}<br>
-       <h3> E-mail: {{ instituicoes.email }}</h3>
+       <h3 > E-mail: {{ instituicoes.email }}</h3>
       </h2>
       
 
@@ -75,7 +75,7 @@
   <div *ngIf="minhaCampanha.length > 0" class="campanha-section">
     <h1 class="text-center mb-5">Campanha Da Instituição</h1>
     <div class="row featurette d-flex flex-md-row flex-column">
-      <div class="col-md-6 col-sm-12 order-md-2 flex-md-column">
+      <div class="col-md-6 col-sm-12 order-md-2 flex-md-column align-items-center justify-content-center">
         <h2 class="featurette-heading">{{minhaCampanha[0].nome}}</h2>
         <p class="lead" id="descricaoCampanha">{{minhaCampanha[0].descricao}}</p>
       </div>

@@ -372,16 +372,13 @@
 
 
 .featurette-heading{
-  margin-left:40px;
+ // margin-left:40px;
   text-transform: uppercase; /* Deixa o texto em letras maiúsculas */
   font-weight: bold; /* Torna o texto mais grosso */
 
 }
 
-.lead{
-  margin-left:50px;
 
-}
 
 
 /* ... (seu CSS atual) ... */
@@ -444,7 +441,7 @@
 
   /* Adicione estilos para tornar o texto responsivo */
   font-size: 24px; /* Reduza o tamanho da fonte para dispositivos menores */
-  padding: 10px; /* Adicione um espaçamento interno para melhor legibilidade */
+ // padding: 10px; /* Adicione um espaçamento interno para melhor legibilidade */
 }
 
 #texto-lado-logo {
