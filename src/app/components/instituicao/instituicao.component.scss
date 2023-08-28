@@ -440,7 +440,7 @@
   margin-right: auto;
 
   /* Adicione estilos para tornar o texto responsivo */
-  font-size: 24px; /* Reduza o tamanho da fonte para dispositivos menores */
+  font-size: 1rem; /* Reduza o tamanho da fonte para dispositivos menores */
  // padding: 10px; /* Adicione um espaçamento interno para melhor legibilidade */
 }
 
@@ -473,7 +473,7 @@
   margin-right: auto;
 
   /* Adicione estilos para tornar o texto responsivo */
-  font-size: 2rem; /* Defina o tamanho da fonte baseado em rem */
+  font-size: 1.2rem; /* Defina o tamanho da fonte baseado em rem */
   padding: 10px; /* Adicione um espaçamento interno para melhor legibilidade */
 }
 
@@ -490,7 +490,7 @@
 /* Adicione regras de estilo para dispositivos menores */
 @media (max-width: 768px) {
   #dados-instituição {
-    font-size: 1.5rem; /* Reduza o tamanho da fonte para dispositivos menores */
+    font-size: 1.2rem; /* Reduza o tamanho da fonte para dispositivos menores */
   }
 
   
